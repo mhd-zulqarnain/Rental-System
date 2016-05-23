@@ -1,0 +1,9 @@
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.sign_in.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Agent.agent_home.resources
