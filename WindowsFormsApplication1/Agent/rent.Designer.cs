@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Agent
 {
-    partial class agent_home
+    partial class rent
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rent));
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +46,22 @@
             this.pReturn = new System.Windows.Forms.PictureBox();
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxDate = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.houseBox = new System.Windows.Forms.ComboBox();
+            this.tbxadrs = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbxnic = new System.Windows.Forms.TextBox();
+            this.tbxCuName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -59,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -78,13 +95,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06897F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -272,22 +290,171 @@
             this.toolTip1.AutomaticDelay = 10;
             this.toolTip1.AutoPopDelay = 0;
             this.toolTip1.InitialDelay = 0;
-            this.toolTip1.ReshowDelay = 2;
+            this.toolTip1.ReshowDelay = 0;
             // 
-            // agent_home
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.tbxDate);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.houseBox);
+            this.panel1.Controls.Add(this.tbxadrs);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.tbxnic);
+            this.panel1.Controls.Add(this.tbxCuName);
+            this.panel1.Location = new System.Drawing.Point(12, 199);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 335);
+            this.panel1.TabIndex = 3;
+            // 
+            // tbxDate
+            // 
+            this.tbxDate.Enabled = false;
+            this.tbxDate.Location = new System.Drawing.Point(215, 139);
+            this.tbxDate.Name = "tbxDate";
+            this.tbxDate.Size = new System.Drawing.Size(144, 20);
+            this.tbxDate.TabIndex = 36;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(90, 142);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 16);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Date of booking";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(428, 43);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(354, 257);
+            this.listView1.TabIndex = 34;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "House number";
+            this.columnHeader1.Width = 98;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Location";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 148;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Price";
+            this.columnHeader3.Width = 92;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(233, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 29);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "BOOK";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // houseBox
+            // 
+            this.houseBox.FormattingEnabled = true;
+            this.houseBox.Location = new System.Drawing.Point(215, 50);
+            this.houseBox.Name = "houseBox";
+            this.houseBox.Size = new System.Drawing.Size(144, 21);
+            this.houseBox.TabIndex = 32;
+            // 
+            // tbxadrs
+            // 
+            this.tbxadrs.Location = new System.Drawing.Point(215, 220);
+            this.tbxadrs.Name = "tbxadrs";
+            this.tbxadrs.Size = new System.Drawing.Size(144, 20);
+            this.tbxadrs.TabIndex = 31;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(92, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 16);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Clint address";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(89, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Customer Nic";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(89, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Customer name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(92, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 16);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "House Number";
+            // 
+            // tbxnic
+            // 
+            this.tbxnic.Location = new System.Drawing.Point(215, 177);
+            this.tbxnic.Name = "tbxnic";
+            this.tbxnic.Size = new System.Drawing.Size(144, 20);
+            this.tbxnic.TabIndex = 26;
+            // 
+            // tbxCuName
+            // 
+            this.tbxCuName.Location = new System.Drawing.Point(215, 103);
+            this.tbxCuName.Name = "tbxCuName";
+            this.tbxCuName.Size = new System.Drawing.Size(144, 20);
+            this.tbxCuName.TabIndex = 25;
+            // 
+            // rent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 556);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "agent_home";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_home";
-            this.Load += new System.EventHandler(this.agent_home_Load);
+            this.Name = "rent";
+            this.Text = "rent";
+            this.Load += new System.EventHandler(this.rent_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -303,6 +470,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -316,6 +485,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pHome;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pAvailable;
         private System.Windows.Forms.PictureBox pAgent;
         private System.Windows.Forms.PictureBox pAddHouse;
@@ -324,6 +494,22 @@
         private System.Windows.Forms.PictureBox pRent;
         private System.Windows.Forms.PictureBox pReturn;
         private System.Windows.Forms.PictureBox pExit;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tbxDate;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox houseBox;
+        private System.Windows.Forms.TextBox tbxadrs;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbxnic;
+        private System.Windows.Forms.TextBox tbxCuName;
+
     }
 }
