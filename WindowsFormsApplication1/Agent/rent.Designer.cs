@@ -47,6 +47,7 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboarea = new System.Windows.Forms.ComboBox();
             this.tbxDate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -62,6 +63,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbxnic = new System.Windows.Forms.TextBox();
             this.tbxCuName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -295,6 +297,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.comboarea);
             this.panel1.Controls.Add(this.tbxDate);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.listView1);
@@ -311,6 +315,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(820, 335);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboarea
+            // 
+            this.comboarea.FormattingEnabled = true;
+            this.comboarea.Location = new System.Drawing.Point(638, 16);
+            this.comboarea.Name = "comboarea";
+            this.comboarea.Size = new System.Drawing.Size(144, 21);
+            this.comboarea.TabIndex = 37;
             // 
             // tbxDate
             // 
@@ -370,6 +383,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "BOOK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // houseBox
             // 
@@ -444,6 +458,16 @@
             this.tbxCuName.Size = new System.Drawing.Size(144, 20);
             this.tbxCuName.TabIndex = 25;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(537, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.Text = "Search By Area";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // rent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +534,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox tbxnic;
         private System.Windows.Forms.TextBox tbxCuName;
+        private System.Windows.Forms.ComboBox comboarea;
+        private System.Windows.Forms.Button btnSearch;
 
     }
 }
