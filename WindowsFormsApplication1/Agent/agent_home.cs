@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Agent
         }
         private void agent_home_Load(object sender, EventArgs e)
         {
-            label1.Text = username;
+            label1.Text ="\n"+username;
         }
     }
 }
