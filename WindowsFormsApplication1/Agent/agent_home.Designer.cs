@@ -71,6 +71,7 @@
             this.label1.Size = new System.Drawing.Size(88, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "\r\nUsername";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -157,6 +158,7 @@
             // 
             // pHome
             // 
+            this.pHome.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pHome.Image = ((System.Drawing.Image)(resources.GetObject("pHome.Image")));
             this.pHome.Location = new System.Drawing.Point(78, 31);
@@ -179,6 +181,7 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
+            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -242,6 +245,7 @@
             this.pRent.TabIndex = 6;
             this.pRent.TabStop = false;
             this.toolTip1.SetToolTip(this.pRent, "Rent the house");
+            this.pRent.Click += new System.EventHandler(this.pRent_Click);
             // 
             // pReturn
             // 

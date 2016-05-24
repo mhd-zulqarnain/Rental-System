@@ -27,5 +27,26 @@ namespace WindowsFormsApplication1.Agent
         {
             label1.Text ="\n"+username;
         }
+
+        private void pRent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new rent("\n"+username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new available_houses("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }

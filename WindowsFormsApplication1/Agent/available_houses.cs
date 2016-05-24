@@ -11,20 +11,20 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Agent
 {
-    public partial class rent : Form
+    public partial class available_houses : Form
     {
         sign_in a = new sign_in();
         string username;
-        public rent()
+        public available_houses()
         {
             InitializeComponent();
         }
-        public rent(string u)
+        public available_houses(string u)
         {
             InitializeComponent();
-            this.username = u;
+            this.username =u ;
         }
-        public void populate(ListView listV, OleDbCommand cmd)
+         public void populate(ListView listV, OleDbCommand cmd)
         {
             
             try
@@ -35,6 +35,7 @@ namespace WindowsFormsApplication1.Agent
                 {
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
+                    li.SubItems.Add("$"+reader[2].ToString());
                     listV.Items.Add(li);
 
 
@@ -46,33 +47,20 @@ namespace WindowsFormsApplication1.Agent
             {
                 MessageBox.Show(ex.Message);
             }
-            finally
-            {
+            
 
               
             }
-        }
-        private void rent_Load(object sender, EventArgs e)
+        private void available_houses_Load(object sender, EventArgs e)
         {
             a.conn.Open();
             OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
             populate(listView1, cm);
+            luname.Text = username;
             begin();
-            lusername.Text = username;
         }
-        
-        
-        public void begin() {
-            OleDbCommand com = new OleDbCommand("SELECT house_details.house_number FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
-            OleDbDataReader rd = com.ExecuteReader();
-            while (rd.Read())
-            {
-                houseBox.Items.Add(rd[0].ToString());
-                
-            }
-            rd.Close();
-
-            tbxDate.Text = DateTime.Now.ToString("MM.dd.yyy");
+        public void begin()
+        {
 
             OleDbCommand cm = new OleDbCommand("SELECT * FROM agent_details ;", a.conn);
             OleDbDataReader red = cm.ExecuteReader();
@@ -81,61 +69,11 @@ namespace WindowsFormsApplication1.Agent
                 comboarea.Items.Add(red[2].ToString());
 
             }
-            rd.Close();
             
-        }
-        
-        
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Random r = new Random();
-            int id = r.Next(1, 900);
-            String cname = tbxCuName.Text;
-            String cAdress = tbxadrs.Text;
-            String cNic = tbxnic.Text;
-            String Hnum = houseBox.Text;
-            String d = DateTime.Now.ToShortDateString();
-
-            try
-            {
-                if (cname != "" && cAdress != "" && cNic != "" && Hnum != "")
-                {
-                    OleDbCommand cmd = new OleDbCommand("Insert into clint_details(CID,clint_name,clint_address,clint_nic) values(?,?,?,?); ", a.conn);
-                    cmd.Parameters.AddWithValue("@p1", id);
-                    cmd.Parameters.AddWithValue("@p2", cname);
-                    cmd.Parameters.AddWithValue("@p3", cAdress);
-                    cmd.Parameters.AddWithValue("@p4", Hnum);
-                    cmd.ExecuteNonQuery();
-                    OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" + id + "','" + Hnum + "','" + d + "'); ", a.conn);
-                    rmd.ExecuteNonQuery();
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Fill all Tables");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
             listView1.Items.Clear();
             OleDbCommand cm = new OleDbCommand(" SELECT house_details.house_number, house_details.house_address, house_details.house_price, house_details.agent_id, house_details.area FROM house_details LEFT JOIN booking_details ON house_details.house_number = booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
             //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
@@ -146,6 +84,7 @@ namespace WindowsFormsApplication1.Agent
                 {
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
+                    li.SubItems.Add("$"+reader[2].ToString());
                     listView1.Items.Add(li);
                 }
 
@@ -153,23 +92,26 @@ namespace WindowsFormsApplication1.Agent
             }
         }
 
-        private void pExit_Click(object sender, EventArgs e)
+        private void pRent_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            var form = new rent("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_home("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form = new sign_in();
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pAvailable_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new available_houses("\n" + username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }

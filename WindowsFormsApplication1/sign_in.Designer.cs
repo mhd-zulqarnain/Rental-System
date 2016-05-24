@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.combotype = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbxpass = new System.Windows.Forms.TextBox();
             this.tbxuName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.combotype = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 218);
             this.panel1.TabIndex = 0;
+            // 
+            // combotype
+            // 
+            this.combotype.FormattingEnabled = true;
+            this.combotype.Items.AddRange(new object[] {
+            "MANAGER",
+            "AGENT"});
+            this.combotype.Location = new System.Drawing.Point(161, 134);
+            this.combotype.Name = "combotype";
+            this.combotype.Size = new System.Drawing.Size(121, 21);
+            this.combotype.TabIndex = 32;
+            this.combotype.Text = "AGENT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(51, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "LOGIN AS";
             // 
             // btnSubmit
             // 
@@ -103,29 +126,6 @@
             this.tbxuName.Size = new System.Drawing.Size(144, 20);
             this.tbxuName.TabIndex = 25;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(51, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "LOGIN AS";
-            // 
-            // combotype
-            // 
-            this.combotype.FormattingEnabled = true;
-            this.combotype.Items.AddRange(new object[] {
-            "MANAGER",
-            "AGENT"});
-            this.combotype.Location = new System.Drawing.Point(161, 134);
-            this.combotype.Name = "combotype";
-            this.combotype.Size = new System.Drawing.Size(121, 21);
-            this.combotype.TabIndex = 32;
-            this.combotype.Text = "AGENT";
-            // 
             // sign_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +136,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "sign_in";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sign_in";
             this.Load += new System.EventHandler(this.sign_in_Load);
             this.panel1.ResumeLayout(false);

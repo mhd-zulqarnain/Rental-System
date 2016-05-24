@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Agent
 {
-    partial class rent
+    partial class available_houses
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rent));
-            this.lusername = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(available_houses));
+            this.luname = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -47,23 +47,12 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.comboarea = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.comboarea = new System.Windows.Forms.ComboBox();
-            this.tbxDate = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.houseBox = new System.Windows.Forms.ComboBox();
-            this.tbxadrs = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbxnic = new System.Windows.Forms.TextBox();
-            this.tbxCuName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -80,16 +69,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lusername
+            // luname
             // 
-            this.lusername.AutoSize = true;
-            this.lusername.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lusername.ForeColor = System.Drawing.Color.Coral;
-            this.lusername.Location = new System.Drawing.Point(54, 0);
-            this.lusername.Name = "lusername";
-            this.lusername.Size = new System.Drawing.Size(88, 46);
-            this.lusername.TabIndex = 0;
-            this.lusername.Text = "\r\nUsername";
+            this.luname.AutoSize = true;
+            this.luname.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luname.ForeColor = System.Drawing.Color.Coral;
+            this.luname.Location = new System.Drawing.Point(54, 0);
+            this.luname.Name = "luname";
+            this.luname.Size = new System.Drawing.Size(88, 46);
+            this.luname.TabIndex = 0;
+            this.luname.Text = "\r\nUsername";
             // 
             // tableLayoutPanel1
             // 
@@ -97,14 +86,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06897F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
             this.tableLayoutPanel1.TabIndex = 2;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -112,7 +100,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lusername, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.luname, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -179,6 +167,7 @@
             // 
             // pHome
             // 
+            this.pHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pHome.Image = ((System.Drawing.Image)(resources.GetObject("pHome.Image")));
             this.pHome.Location = new System.Drawing.Point(78, 31);
@@ -188,6 +177,7 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
+            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 
@@ -201,7 +191,6 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
-            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -256,7 +245,6 @@
             // 
             // pRent
             // 
-            this.pRent.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pRent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pRent.Image = ((System.Drawing.Image)(resources.GetObject("pRent.Image")));
             this.pRent.Location = new System.Drawing.Point(528, 31);
@@ -266,6 +254,7 @@
             this.pRent.TabIndex = 6;
             this.pRent.TabStop = false;
             this.toolTip1.SetToolTip(this.pRent, "Rent the house");
+            this.pRent.Click += new System.EventHandler(this.pRent_Click);
             // 
             // pReturn
             // 
@@ -290,75 +279,30 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
-            this.pExit.Click += new System.EventHandler(this.pExit_Click);
             // 
             // toolTip1
             // 
             this.toolTip1.AutomaticDelay = 10;
             this.toolTip1.AutoPopDelay = 0;
             this.toolTip1.InitialDelay = 0;
-            this.toolTip1.ReshowDelay = 0;
+            this.toolTip1.ReshowDelay = 2;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.comboarea);
-            this.panel1.Controls.Add(this.tbxDate);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.houseBox);
-            this.panel1.Controls.Add(this.tbxadrs);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.tbxnic);
-            this.panel1.Controls.Add(this.tbxCuName);
-            this.panel1.Location = new System.Drawing.Point(12, 199);
+            this.panel1.Location = new System.Drawing.Point(29, 227);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(820, 335);
+            this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.GridLines = true;
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(411, 55);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(371, 257);
-            this.listView1.TabIndex = 39;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "House number";
-            this.columnHeader1.Width = 122;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Location";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 200;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Price";
-            this.columnHeader3.Width = 67;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(537, 16);
+            this.btnSearch.Location = new System.Drawing.Point(432, 35);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(95, 23);
-            this.btnSearch.TabIndex = 38;
+            this.btnSearch.TabIndex = 42;
             this.btnSearch.Text = "Search By Area";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -366,128 +310,54 @@
             // comboarea
             // 
             this.comboarea.FormattingEnabled = true;
-            this.comboarea.Location = new System.Drawing.Point(638, 16);
+            this.comboarea.Location = new System.Drawing.Point(533, 35);
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
-            this.comboarea.TabIndex = 37;
+            this.comboarea.TabIndex = 41;
             // 
-            // tbxDate
+            // listView1
             // 
-            this.tbxDate.Enabled = false;
-            this.tbxDate.Location = new System.Drawing.Point(215, 139);
-            this.tbxDate.Name = "tbxDate";
-            this.tbxDate.Size = new System.Drawing.Size(144, 20);
-            this.tbxDate.TabIndex = 36;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(44, 64);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(724, 238);
+            this.listView1.TabIndex = 43;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // label5
+            // columnHeader1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(90, 142);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 16);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Date of booking";
+            this.columnHeader1.Text = "House number";
+            this.columnHeader1.Width = 131;
             // 
-            // button1
+            // columnHeader2
             // 
-            this.button1.Location = new System.Drawing.Point(233, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 29);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "BOOK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.columnHeader2.Text = "Location";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 452;
             // 
-            // houseBox
+            // columnHeader3
             // 
-            this.houseBox.FormattingEnabled = true;
-            this.houseBox.Location = new System.Drawing.Point(215, 50);
-            this.houseBox.Name = "houseBox";
-            this.houseBox.Size = new System.Drawing.Size(144, 21);
-            this.houseBox.TabIndex = 32;
+            this.columnHeader3.Text = "Price";
+            this.columnHeader3.Width = 120;
             // 
-            // tbxadrs
-            // 
-            this.tbxadrs.Location = new System.Drawing.Point(215, 220);
-            this.tbxadrs.Name = "tbxadrs";
-            this.tbxadrs.Size = new System.Drawing.Size(144, 20);
-            this.tbxadrs.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(92, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Clint address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(89, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Customer Nic";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(89, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 16);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Customer name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(92, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 16);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "House Number";
-            // 
-            // tbxnic
-            // 
-            this.tbxnic.Location = new System.Drawing.Point(215, 177);
-            this.tbxnic.Name = "tbxnic";
-            this.tbxnic.Size = new System.Drawing.Size(144, 20);
-            this.tbxnic.TabIndex = 26;
-            // 
-            // tbxCuName
-            // 
-            this.tbxCuName.Location = new System.Drawing.Point(215, 103);
-            this.tbxCuName.Name = "tbxCuName";
-            this.tbxCuName.Size = new System.Drawing.Size(144, 20);
-            this.tbxCuName.TabIndex = 25;
-            // 
-            // rent
+            // available_houses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "rent";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "rent";
-            this.Load += new System.EventHandler(this.rent_Load);
+            this.Name = "available_houses";
+            this.Text = "available_houses";
+            this.Load += new System.EventHandler(this.available_houses_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -504,14 +374,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lusername;
+        private System.Windows.Forms.Label luname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -528,19 +397,8 @@
         private System.Windows.Forms.PictureBox pReturn;
         private System.Windows.Forms.PictureBox pExit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbxDate;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox houseBox;
-        private System.Windows.Forms.TextBox tbxadrs;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbxnic;
-        private System.Windows.Forms.TextBox tbxCuName;
-        private System.Windows.Forms.ComboBox comboarea;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ComboBox comboarea;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
