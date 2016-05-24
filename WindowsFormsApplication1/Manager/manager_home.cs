@@ -26,5 +26,10 @@ namespace WindowsFormsApplication1.Manager
         {
             label1.Text = username;
         }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

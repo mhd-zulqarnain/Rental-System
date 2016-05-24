@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Agent
         public available_houses(string u)
         {
             InitializeComponent();
-            this.username =u ;
+            this.username =u;
         }
          public void populate(ListView listV, OleDbCommand cmd)
         {
@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Agent
         private void pRent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new rent("\n" + username);
+            var form = new rent( username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Agent
         private void pHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_home("\n" + username);
+            var form = new agent_home(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }

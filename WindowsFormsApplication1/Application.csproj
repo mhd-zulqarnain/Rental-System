@@ -62,6 +62,12 @@
     <Compile Include="Agent\rent.Designer.cs">
       <DependentUpon>rent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\add_house.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\add_house.Designer.cs">
+      <DependentUpon>add_house.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\manager_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agent\rent.resx">
       <DependentUpon>rent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\add_house.resx">
+      <DependentUpon>add_house.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\manager_home.resx">
       <DependentUpon>manager_home.cs</DependentUpon>

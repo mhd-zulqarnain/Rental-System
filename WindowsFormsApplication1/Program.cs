@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Agent;
+using WindowsFormsApplication1.Manager;
 
 namespace WindowsFormsApplication1
 {
@@ -17,7 +18,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new sign_in());
+            Application.Run(new add_house());
         }
     }
 }

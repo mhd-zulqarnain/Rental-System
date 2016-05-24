@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication1.Agent
+﻿namespace WindowsFormsApplication1.Manager
 {
-    partial class agent_home
+    partial class add_house
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_home));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(add_house));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pHome = new System.Windows.Forms.PictureBox();
             this.pAvailable = new System.Windows.Forms.PictureBox();
             this.pAgent = new System.Windows.Forms.PictureBox();
@@ -46,6 +46,16 @@
             this.pReturn = new System.Windows.Forms.PictureBox();
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbxAdress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxhnum = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboPric = new System.Windows.Forms.ComboBox();
+            this.comboArea = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -59,19 +69,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(54, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "\r\nUsername";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -79,13 +78,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06897F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
@@ -112,6 +111,17 @@
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(54, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "\r\nUsername";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 11;
@@ -126,7 +136,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pHome, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.pAvailable, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.pAgent, 3, 1);
@@ -145,20 +155,21 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(836, 96);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "LOGOUT";
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "LOGOUT";
             // 
             // pHome
             // 
-            this.pHome.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pHome.Image = ((System.Drawing.Image)(resources.GetObject("pHome.Image")));
             this.pHome.Location = new System.Drawing.Point(78, 31);
@@ -181,12 +192,10 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
-            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
-            this.pAgent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pAgent.Cursor = System.Windows.Forms.Cursors.No;
+            this.pAgent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAgent.Image = ((System.Drawing.Image)(resources.GetObject("pAgent.Image")));
             this.pAgent.Location = new System.Drawing.Point(228, 31);
             this.pAgent.Name = "pAgent";
@@ -194,12 +203,11 @@
             this.pAgent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAgent.TabIndex = 2;
             this.pAgent.TabStop = false;
-            this.toolTip1.SetToolTip(this.pAgent, "Disable Only admin");
+            this.toolTip1.SetToolTip(this.pAgent, "Agent Details");
             // 
             // pAddHouse
             // 
-            this.pAddHouse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pAddHouse.Cursor = System.Windows.Forms.Cursors.No;
+            this.pAddHouse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAddHouse.Image = ((System.Drawing.Image)(resources.GetObject("pAddHouse.Image")));
             this.pAddHouse.Location = new System.Drawing.Point(303, 31);
             this.pAddHouse.Name = "pAddHouse";
@@ -207,12 +215,11 @@
             this.pAddHouse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAddHouse.TabIndex = 3;
             this.pAddHouse.TabStop = false;
-            this.toolTip1.SetToolTip(this.pAddHouse, "Disable Only admin");
+            this.toolTip1.SetToolTip(this.pAddHouse, "Add House");
             // 
             // pReser
             // 
-            this.pReser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pReser.Cursor = System.Windows.Forms.Cursors.No;
+            this.pReser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pReser.Image = ((System.Drawing.Image)(resources.GetObject("pReser.Image")));
             this.pReser.Location = new System.Drawing.Point(378, 31);
             this.pReser.Name = "pReser";
@@ -220,7 +227,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Disable Only admin");
+            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
             // 
             // pClint
             // 
@@ -236,7 +243,8 @@
             // 
             // pRent
             // 
-            this.pRent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pRent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pRent.Cursor = System.Windows.Forms.Cursors.No;
             this.pRent.Image = ((System.Drawing.Image)(resources.GetObject("pRent.Image")));
             this.pRent.Location = new System.Drawing.Point(528, 31);
             this.pRent.Name = "pRent";
@@ -244,12 +252,12 @@
             this.pRent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pRent.TabIndex = 6;
             this.pRent.TabStop = false;
-            this.toolTip1.SetToolTip(this.pRent, "Rent the house");
-            this.pRent.Click += new System.EventHandler(this.pRent_Click);
+            this.toolTip1.SetToolTip(this.pRent, "Only agent can acces");
             // 
             // pReturn
             // 
-            this.pReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pReturn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pReturn.Cursor = System.Windows.Forms.Cursors.No;
             this.pReturn.Image = ((System.Drawing.Image)(resources.GetObject("pReturn.Image")));
             this.pReturn.Location = new System.Drawing.Point(603, 31);
             this.pReturn.Name = "pReturn";
@@ -257,7 +265,7 @@
             this.pReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReturn.TabIndex = 7;
             this.pReturn.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReturn, "RETURN");
+            this.toolTip1.SetToolTip(this.pReturn, "Only agent can acces");
             // 
             // pExit
             // 
@@ -278,21 +286,129 @@
             this.toolTip1.InitialDelay = 0;
             this.toolTip1.ReshowDelay = 2;
             // 
-            // agent_home
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.comboArea);
+            this.panel1.Controls.Add(this.comboPric);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.tbxAdress);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.tbxhnum);
+            this.panel1.Location = new System.Drawing.Point(12, 210);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 334);
+            this.panel1.TabIndex = 4;
+            // 
+            // tbxAdress
+            // 
+            this.tbxAdress.Location = new System.Drawing.Point(221, 207);
+            this.tbxAdress.Multiline = true;
+            this.tbxAdress.Name = "tbxAdress";
+            this.tbxAdress.Size = new System.Drawing.Size(294, 19);
+            this.tbxAdress.TabIndex = 40;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(125, 207);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 16);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "ADDRESS";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(95, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "House Number";
+            // 
+            // tbxhnum
+            // 
+            this.tbxhnum.Enabled = false;
+            this.tbxhnum.Location = new System.Drawing.Point(221, 144);
+            this.tbxhnum.Name = "tbxhnum";
+            this.tbxhnum.Size = new System.Drawing.Size(144, 20);
+            this.tbxhnum.TabIndex = 37;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(141, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "PRICE $";
+            // 
+            // comboPric
+            // 
+            this.comboPric.FormattingEnabled = true;
+            this.comboPric.Items.AddRange(new object[] {
+            "1800",
+            "1300",
+            "1500",
+            "1400"});
+            this.comboPric.Location = new System.Drawing.Point(221, 177);
+            this.comboPric.Name = "comboPric";
+            this.comboPric.Size = new System.Drawing.Size(121, 21);
+            this.comboPric.TabIndex = 42;
+            // 
+            // comboArea
+            // 
+            this.comboArea.FormattingEnabled = true;
+            this.comboArea.Location = new System.Drawing.Point(221, 232);
+            this.comboArea.Name = "comboArea";
+            this.comboArea.Size = new System.Drawing.Size(121, 21);
+            this.comboArea.TabIndex = 43;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(157, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "AREA";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(384, 293);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 45;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // add_house
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 556);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Cursor = System.Windows.Forms.Cursors.No;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "agent_home";
+            this.Name = "add_house";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_home";
-            this.Load += new System.EventHandler(this.agent_home_Load);
+            this.Text = "add_house";
+            this.Load += new System.EventHandler(this.add_house_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -308,19 +424,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pHome;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pAvailable;
         private System.Windows.Forms.PictureBox pAgent;
         private System.Windows.Forms.PictureBox pAddHouse;
@@ -329,6 +448,15 @@
         private System.Windows.Forms.PictureBox pRent;
         private System.Windows.Forms.PictureBox pReturn;
         private System.Windows.Forms.PictureBox pExit;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboArea;
+        private System.Windows.Forms.ComboBox comboPric;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbxAdress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbxhnum;
     }
 }
