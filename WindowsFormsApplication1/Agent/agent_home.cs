@@ -48,5 +48,13 @@ namespace WindowsFormsApplication1.Agent
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new sign_in();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }

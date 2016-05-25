@@ -56,16 +56,25 @@ namespace WindowsFormsApplication1.Manager
 
             }
 
-            OleDbCommand ins = new OleDbCommand("insert into house_details(house_number,house_address,agent_id,MID,area) values(?,?,?,?,?) ",a.conn);
+            OleDbCommand ins = new OleDbCommand("insert into house_details(house_number,house_address,agent_id,MID,area,house_price) values(?,?,?,?,?,?) ",a.conn);
             ins.Parameters.AddWithValue("@p1", housenumber);
             ins.Parameters.AddWithValue("@p2", tbxAdress.Text);
-            ins.Parameters.AddWithValue("@p1", agent_id);
-            ins.Parameters.AddWithValue("@p1", 1);
-            ins.Parameters.AddWithValue("@p1", comboArea.Text);
+            ins.Parameters.AddWithValue("@p3", agent_id);
+            ins.Parameters.AddWithValue("@p4", 1);
+            ins.Parameters.AddWithValue("@p5", comboArea.Text);
+            ins.Parameters.AddWithValue("@p6", comboPric.Text);
             ins.ExecuteNonQuery();
             Random rd = new Random();
             housenumber = rd.Next(3000, 9999);
             tbxhnum.Text = housenumber.ToString();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new sign_in();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }

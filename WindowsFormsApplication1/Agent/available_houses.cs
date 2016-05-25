@@ -115,5 +115,10 @@ namespace WindowsFormsApplication1.Agent
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

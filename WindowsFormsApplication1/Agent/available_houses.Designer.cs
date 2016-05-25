@@ -47,12 +47,12 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.comboarea = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.comboarea = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -191,6 +191,7 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
+            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -289,6 +290,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.comboarea);
@@ -296,24 +298,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 3;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(432, 35);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
-            this.btnSearch.TabIndex = 42;
-            this.btnSearch.Text = "Search By Area";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // comboarea
-            // 
-            this.comboarea.FormattingEnabled = true;
-            this.comboarea.Location = new System.Drawing.Point(533, 35);
-            this.comboarea.Name = "comboarea";
-            this.comboarea.Size = new System.Drawing.Size(144, 21);
-            this.comboarea.TabIndex = 41;
             // 
             // listView1
             // 
@@ -346,6 +330,24 @@
             // 
             this.columnHeader3.Text = "Price";
             this.columnHeader3.Width = 120;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(432, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.TabIndex = 42;
+            this.btnSearch.Text = "Search By Area";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // comboarea
+            // 
+            this.comboarea.FormattingEnabled = true;
+            this.comboarea.Location = new System.Drawing.Point(533, 35);
+            this.comboarea.Name = "comboarea";
+            this.comboarea.Size = new System.Drawing.Size(144, 21);
+            this.comboarea.TabIndex = 41;
             // 
             // available_houses
             // 

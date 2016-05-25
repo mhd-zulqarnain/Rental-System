@@ -31,5 +31,18 @@ namespace WindowsFormsApplication1.Manager
         {
             Application.Exit();
         }
+
+        private void pAddHouse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new add_house(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

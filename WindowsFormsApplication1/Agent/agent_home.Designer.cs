@@ -155,6 +155,7 @@
             this.label2.Size = new System.Drawing.Size(60, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "LOGOUT";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pHome
             // 
@@ -286,7 +287,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Cursor = System.Windows.Forms.Cursors.No;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "agent_home";

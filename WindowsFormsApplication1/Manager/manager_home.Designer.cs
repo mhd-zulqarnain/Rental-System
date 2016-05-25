@@ -181,6 +181,7 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
+            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -205,6 +206,7 @@
             this.pAddHouse.TabIndex = 3;
             this.pAddHouse.TabStop = false;
             this.toolTip1.SetToolTip(this.pAddHouse, "Add House");
+            this.pAddHouse.Click += new System.EventHandler(this.pAddHouse_Click);
             // 
             // pReser
             // 

@@ -47,15 +47,15 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboArea = new System.Windows.Forms.ComboBox();
+            this.comboPric = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbxAdress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbxhnum = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboPric = new System.Windows.Forms.ComboBox();
-            this.comboArea = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -166,6 +166,7 @@
             this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "LOGOUT";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pHome
             // 
@@ -303,6 +304,59 @@
             this.panel1.Size = new System.Drawing.Size(820, 334);
             this.panel1.TabIndex = 4;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(384, 293);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 45;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(157, 237);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "AREA";
+            // 
+            // comboArea
+            // 
+            this.comboArea.FormattingEnabled = true;
+            this.comboArea.Location = new System.Drawing.Point(221, 232);
+            this.comboArea.Name = "comboArea";
+            this.comboArea.Size = new System.Drawing.Size(121, 21);
+            this.comboArea.TabIndex = 43;
+            // 
+            // comboPric
+            // 
+            this.comboPric.FormattingEnabled = true;
+            this.comboPric.Items.AddRange(new object[] {
+            "1800",
+            "1300",
+            "1500",
+            "1400"});
+            this.comboPric.Location = new System.Drawing.Point(221, 177);
+            this.comboPric.Name = "comboPric";
+            this.comboPric.Size = new System.Drawing.Size(121, 21);
+            this.comboPric.TabIndex = 42;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(141, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "PRICE $";
+            // 
             // tbxAdress
             // 
             this.tbxAdress.Location = new System.Drawing.Point(221, 207);
@@ -340,59 +394,6 @@
             this.tbxhnum.Name = "tbxhnum";
             this.tbxhnum.Size = new System.Drawing.Size(144, 20);
             this.tbxhnum.TabIndex = 37;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(141, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "PRICE $";
-            // 
-            // comboPric
-            // 
-            this.comboPric.FormattingEnabled = true;
-            this.comboPric.Items.AddRange(new object[] {
-            "1800",
-            "1300",
-            "1500",
-            "1400"});
-            this.comboPric.Location = new System.Drawing.Point(221, 177);
-            this.comboPric.Name = "comboPric";
-            this.comboPric.Size = new System.Drawing.Size(121, 21);
-            this.comboPric.TabIndex = 42;
-            // 
-            // comboArea
-            // 
-            this.comboArea.FormattingEnabled = true;
-            this.comboArea.Location = new System.Drawing.Point(221, 232);
-            this.comboArea.Name = "comboArea";
-            this.comboArea.Size = new System.Drawing.Size(121, 21);
-            this.comboArea.TabIndex = 43;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(157, 237);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "AREA";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(384, 293);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 45;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // add_house
             // 
