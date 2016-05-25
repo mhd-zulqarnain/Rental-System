@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new manager_home());
+            Application.Run(new agent_return());
         }
     }
 }

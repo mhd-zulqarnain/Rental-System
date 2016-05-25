@@ -11,28 +11,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Agent
 {
-    public partial class agent_clint_details : Form
+    public partial class agent_return : Form
     {
         sign_in a = new sign_in();
         string username;
-        public agent_clint_details()
+        public agent_return()
         {
             InitializeComponent();
         }
-        public agent_clint_details( string u)
+        public agent_return(string u)
         {
             InitializeComponent();
             this.username = u;
         }
-        private void agent_clint_details_Load(object sender, EventArgs e)
+
+        private void agent_return_Load(object sender, EventArgs e)
         {
             a.conn.Open();
-            begin();
-        }
-
-        public void begin()
-        {
-
             OleDbCommand cm = new OleDbCommand("SELECT clint_name FROM clint_details ;", a.conn);
             OleDbDataReader red = cm.ExecuteReader();
             while (red.Read())
@@ -40,12 +35,13 @@ namespace WindowsFormsApplication1.Agent
                 comboclint.Items.Add(red[0].ToString());
 
             }
-
         }
 
-        private void btnchkDetail_Click(object sender, EventArgs e)
+        private void btnGetRec_Click(object sender, EventArgs e)
         {
+            groupBox1.Enabled = true;
             listView1.Items.Clear();
+            combohouse.Items.Clear();
             OleDbCommand cm = new OleDbCommand(" SELECT clint_details.clint_name, clint_details.clint_nic, booking_details.house_number, house_details.house_address, house_details.house_price, booking_details.booking_date FROM house_details INNER JOIN (clint_details INNER JOIN booking_details ON clint_details.CID = booking_details.CID) ON house_details.house_number = booking_details.house_number; ", a.conn);
             //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
             OleDbDataReader reader = cm.ExecuteReader();
@@ -55,15 +51,70 @@ namespace WindowsFormsApplication1.Agent
                 {
                     ListViewItem li = new ListViewItem(reader[2].ToString());
                     li.SubItems.Add(reader[3].ToString());
-                    li.SubItems.Add("$" + reader[4].ToString());
-                    li.SubItems.Add(reader[5].ToString());
                     listView1.Items.Add(li);
+                    combohouse.Items.Add(reader[2].ToString());
 
                 }
 
-            } if (listView1.Items.Count == 0)
-                MessageBox.Show("NO HOUSE BOOKINGS");
+            }
+            if (listView1.Items.Count == 0)
+            {
+                MessageBox.Show("NO HOUSE BOOKINGS TO RETURN");
+                btnreturn.Enabled = false;
+
+            }
+            else
+                btnreturn.Enabled = true;
+        }
+
+        private void btnreturn_Click(object sender, EventArgs e)
+        {
+            combohouse.Items.Clear();
+             OleDbCommand cm = new OleDbCommand("DELETE FROM booking_details where house_number=?", a.conn);
+            cm.Parameters.AddWithValue("@p1", combohouse.Text);
+            cm.ExecuteNonQuery();
+
+            MessageBox.Show("House returned");
+            groupBox1.Enabled = false;
+            listView1.Items.Clear();
             
+        }
+
+        private void pHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_home("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new available_houses("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pClint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_clint_details("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pRent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new rent("\n" + username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -73,39 +124,6 @@ namespace WindowsFormsApplication1.Agent
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
-
-        private void pHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new agent_home(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pAvailable_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new available_houses(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pRent_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new rent(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pReturn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
-}
+

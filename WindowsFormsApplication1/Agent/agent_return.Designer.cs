@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Agent
 {
-    partial class agent_home
+    partial class agent_return
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_home));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_return));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.luname = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.pHome = new System.Windows.Forms.PictureBox();
@@ -46,6 +46,18 @@
             this.pReturn = new System.Windows.Forms.PictureBox();
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnreturn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.combohouse = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnGetRec = new System.Windows.Forms.Button();
+            this.comboclint = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -59,19 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Coral;
-            this.label1.Location = new System.Drawing.Point(54, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "\r\nUsername";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -79,13 +81,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 9);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06897F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel2
             // 
@@ -93,7 +95,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox10, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.luname, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -111,6 +113,17 @@
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
+            // 
+            // luname
+            // 
+            this.luname.AutoSize = true;
+            this.luname.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luname.ForeColor = System.Drawing.Color.Coral;
+            this.luname.Location = new System.Drawing.Point(54, 0);
+            this.luname.Name = "luname";
+            this.luname.Size = new System.Drawing.Size(88, 46);
+            this.luname.TabIndex = 0;
+            this.luname.Text = "\r\nUsername";
             // 
             // tableLayoutPanel3
             // 
@@ -148,6 +161,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Location = new System.Drawing.Point(3, 0);
@@ -159,7 +173,7 @@
             // 
             // pHome
             // 
-            this.pHome.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pHome.Image = ((System.Drawing.Image)(resources.GetObject("pHome.Image")));
             this.pHome.Location = new System.Drawing.Point(78, 31);
@@ -169,6 +183,7 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
+            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 
@@ -225,6 +240,7 @@
             // 
             // pClint
             // 
+            this.pClint.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pClint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pClint.Image = ((System.Drawing.Image)(resources.GetObject("pClint.Image")));
             this.pClint.Location = new System.Drawing.Point(453, 31);
@@ -234,6 +250,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // pRent
             // 
@@ -250,6 +267,7 @@
             // 
             // pReturn
             // 
+            this.pReturn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pReturn.Image = ((System.Drawing.Image)(resources.GetObject("pReturn.Image")));
             this.pReturn.Location = new System.Drawing.Point(603, 31);
@@ -259,7 +277,6 @@
             this.pReturn.TabIndex = 7;
             this.pReturn.TabStop = false;
             this.toolTip1.SetToolTip(this.pReturn, "RETURN");
-            this.pReturn.Click += new System.EventHandler(this.pReturn_Click);
             // 
             // pExit
             // 
@@ -272,6 +289,7 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
+            this.pExit.Click += new System.EventHandler(this.pExit_Click);
             // 
             // toolTip1
             // 
@@ -280,7 +298,126 @@
             this.toolTip1.InitialDelay = 0;
             this.toolTip1.ReshowDelay = 2;
             // 
-            // agent_home
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.btnGetRec);
+            this.panel1.Controls.Add(this.comboclint);
+            this.panel1.Location = new System.Drawing.Point(31, 231);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 317);
+            this.panel1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(304, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 22);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Clint Name";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnreturn);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.combohouse);
+            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(31, 72);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(731, 241);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnreturn
+            // 
+            this.btnreturn.Location = new System.Drawing.Point(199, 164);
+            this.btnreturn.Name = "btnreturn";
+            this.btnreturn.Size = new System.Drawing.Size(75, 42);
+            this.btnreturn.TabIndex = 47;
+            this.btnreturn.Text = "Return";
+            this.btnreturn.UseVisualStyleBackColor = true;
+            this.btnreturn.Click += new System.EventHandler(this.btnreturn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label3.Location = new System.Drawing.Point(6, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 22);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "House number";
+            // 
+            // combohouse
+            // 
+            this.combohouse.FormattingEnabled = true;
+            this.combohouse.Location = new System.Drawing.Point(133, 76);
+            this.combohouse.Name = "combohouse";
+            this.combohouse.Size = new System.Drawing.Size(141, 21);
+            this.combohouse.TabIndex = 3;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(298, 19);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(409, 215);
+            this.listView1.TabIndex = 44;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "House#";
+            this.columnHeader1.Width = 58;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ADDRESS";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 343;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-76, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "House number";
+            // 
+            // btnGetRec
+            // 
+            this.btnGetRec.Location = new System.Drawing.Point(576, 43);
+            this.btnGetRec.Name = "btnGetRec";
+            this.btnGetRec.Size = new System.Drawing.Size(75, 23);
+            this.btnGetRec.TabIndex = 48;
+            this.btnGetRec.Text = "get record";
+            this.btnGetRec.UseVisualStyleBackColor = true;
+            this.btnGetRec.Click += new System.EventHandler(this.btnGetRec_Click);
+            // 
+            // comboclint
+            // 
+            this.comboclint.FormattingEnabled = true;
+            this.comboclint.Location = new System.Drawing.Point(406, 43);
+            this.comboclint.Name = "comboclint";
+            this.comboclint.Size = new System.Drawing.Size(141, 21);
+            this.comboclint.TabIndex = 47;
+            // 
+            // agent_return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -288,13 +425,13 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "agent_home";
+            this.Name = "agent_return";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_home";
-            this.Load += new System.EventHandler(this.agent_home_Load);
+            this.Text = "agent_return";
+            this.Load += new System.EventHandler(this.agent_return_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -310,19 +447,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label luname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pHome;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pAvailable;
         private System.Windows.Forms.PictureBox pAgent;
         private System.Windows.Forms.PictureBox pAddHouse;
@@ -331,6 +473,17 @@
         private System.Windows.Forms.PictureBox pRent;
         private System.Windows.Forms.PictureBox pReturn;
         private System.Windows.Forms.PictureBox pExit;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnreturn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox combohouse;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnGetRec;
+        private System.Windows.Forms.ComboBox comboclint;
     }
 }
