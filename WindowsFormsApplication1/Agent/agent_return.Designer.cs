@@ -47,8 +47,11 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnreturn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.combohouse = new System.Windows.Forms.ComboBox();
@@ -124,6 +127,7 @@
             this.luname.Size = new System.Drawing.Size(88, 46);
             this.luname.TabIndex = 0;
             this.luname.Text = "\r\nUsername";
+            this.luname.Click += new System.EventHandler(this.luname_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -267,7 +271,7 @@
             // 
             // pReturn
             // 
-            this.pReturn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pReturn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pReturn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pReturn.Image = ((System.Drawing.Image)(resources.GetObject("pReturn.Image")));
             this.pReturn.Location = new System.Drawing.Point(603, 31);
@@ -301,14 +305,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnGetRec);
             this.panel1.Controls.Add(this.comboclint);
-            this.panel1.Location = new System.Drawing.Point(31, 231);
+            this.panel1.Location = new System.Drawing.Point(12, 209);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 317);
+            this.panel1.Size = new System.Drawing.Size(797, 335);
             this.panel1.TabIndex = 7;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(70, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 51;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(298, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 22);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Clint Name";
             // 
             // label1
             // 
@@ -323,17 +347,29 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnreturn);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.combohouse);
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(31, 72);
+            this.groupBox1.Location = new System.Drawing.Point(24, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(731, 241);
+            this.groupBox1.Size = new System.Drawing.Size(738, 229);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(31, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 22);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "House Number";
             // 
             // btnreturn
             // 
@@ -349,12 +385,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(6, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 22);
+            this.label3.Size = new System.Drawing.Size(0, 22);
             this.label3.TabIndex = 47;
-            this.label3.Text = "House number";
             // 
             // combohouse
             // 
@@ -485,5 +520,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGetRec;
         private System.Windows.Forms.ComboBox comboclint;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

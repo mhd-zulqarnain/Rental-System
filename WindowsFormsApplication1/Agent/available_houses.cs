@@ -118,7 +118,28 @@ namespace WindowsFormsApplication1.Agent
 
         private void pAvailable_Click(object sender, EventArgs e)
         {
-           
+            
+        }
+
+        private void pClint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_clint_details(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pReturn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_return(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication1.Agent
+﻿namespace WindowsFormsApplication1.Manager
 {
-    partial class agent_clint_details
+    partial class manager_agent_details
     {
         /// <summary>
         /// Required designer variable.
@@ -29,91 +29,66 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_clint_details));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.label2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(manager_agent_details));
+            this.label3 = new System.Windows.Forms.Label();
             this.pHome = new System.Windows.Forms.PictureBox();
             this.pAvailable = new System.Windows.Forms.PictureBox();
             this.pAgent = new System.Windows.Forms.PictureBox();
             this.pAddHouse = new System.Windows.Forms.PictureBox();
             this.pReser = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnchkDetail = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboclint = new System.Windows.Forms.ComboBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pClint = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pRent = new System.Windows.Forms.PictureBox();
-            this.pExit = new System.Windows.Forms.PictureBox();
             this.pReturn = new System.Windows.Forms.PictureBox();
+            this.pExit = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.luname = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboagentname = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.l1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAddHouse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReser)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pClint)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // columnHeader3
+            // label3
             // 
-            this.columnHeader3.Text = "Price";
-            this.columnHeader3.Width = 120;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ADDRESS";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 452;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "House Number";
-            this.columnHeader1.Width = 131;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(44, 64);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(724, 238);
-            this.listView1.TabIndex = 43;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "LOGOUT";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 18);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "LOGOUT";
             // 
             // pHome
             // 
@@ -127,7 +102,6 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
-            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 
@@ -141,12 +115,11 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
-            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
-            this.pAgent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pAgent.Cursor = System.Windows.Forms.Cursors.No;
+            this.pAgent.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pAgent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAgent.Image = ((System.Drawing.Image)(resources.GetObject("pAgent.Image")));
             this.pAgent.Location = new System.Drawing.Point(228, 31);
             this.pAgent.Name = "pAgent";
@@ -154,12 +127,11 @@
             this.pAgent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAgent.TabIndex = 2;
             this.pAgent.TabStop = false;
-            this.toolTip1.SetToolTip(this.pAgent, "Disable Only admin");
+            this.toolTip1.SetToolTip(this.pAgent, "Agent Details");
             // 
             // pAddHouse
             // 
-            this.pAddHouse.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pAddHouse.Cursor = System.Windows.Forms.Cursors.No;
+            this.pAddHouse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAddHouse.Image = ((System.Drawing.Image)(resources.GetObject("pAddHouse.Image")));
             this.pAddHouse.Location = new System.Drawing.Point(303, 31);
             this.pAddHouse.Name = "pAddHouse";
@@ -167,12 +139,11 @@
             this.pAddHouse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pAddHouse.TabIndex = 3;
             this.pAddHouse.TabStop = false;
-            this.toolTip1.SetToolTip(this.pAddHouse, "Disable Only admin");
+            this.toolTip1.SetToolTip(this.pAddHouse, "Add House");
             // 
             // pReser
             // 
-            this.pReser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pReser.Cursor = System.Windows.Forms.Cursors.No;
+            this.pReser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pReser.Image = ((System.Drawing.Image)(resources.GetObject("pReser.Image")));
             this.pReser.Location = new System.Drawing.Point(378, 31);
             this.pReser.Name = "pReser";
@@ -180,60 +151,10 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Disable Only admin");
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.btnchkDetail);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboclint);
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Location = new System.Drawing.Point(31, 231);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 317);
-            this.panel1.TabIndex = 5;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnchkDetail
-            // 
-            this.btnchkDetail.Location = new System.Drawing.Point(576, 21);
-            this.btnchkDetail.Name = "btnchkDetail";
-            this.btnchkDetail.Size = new System.Drawing.Size(115, 23);
-            this.btnchkDetail.TabIndex = 46;
-            this.btnchkDetail.Text = "Check Details";
-            this.btnchkDetail.UseVisualStyleBackColor = true;
-            this.btnchkDetail.Click += new System.EventHandler(this.btnchkDetail_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(347, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 15);
-            this.label1.TabIndex = 45;
-            this.label1.Text = "Clint Name";
-            // 
-            // comboclint
-            // 
-            this.comboclint.FormattingEnabled = true;
-            this.comboclint.Location = new System.Drawing.Point(438, 21);
-            this.comboclint.Name = "comboclint";
-            this.comboclint.Size = new System.Drawing.Size(121, 21);
-            this.comboclint.TabIndex = 44;
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutomaticDelay = 10;
-            this.toolTip1.AutoPopDelay = 0;
-            this.toolTip1.InitialDelay = 0;
-            this.toolTip1.ReshowDelay = 2;
+            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
             // 
             // pClint
             // 
-            this.pClint.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pClint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pClint.Image = ((System.Drawing.Image)(resources.GetObject("pClint.Image")));
             this.pClint.Location = new System.Drawing.Point(453, 31);
@@ -243,11 +164,25 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
-            this.pClint.Click += new System.EventHandler(this.pClint_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.l1);
+            this.panel1.Controls.Add(this.listView2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboagentname);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Location = new System.Drawing.Point(11, 210);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(820, 334);
+            this.panel1.TabIndex = 6;
             // 
             // pRent
             // 
-            this.pRent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pRent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pRent.Cursor = System.Windows.Forms.Cursors.No;
             this.pRent.Image = ((System.Drawing.Image)(resources.GetObject("pRent.Image")));
             this.pRent.Location = new System.Drawing.Point(528, 31);
             this.pRent.Name = "pRent";
@@ -255,8 +190,20 @@
             this.pRent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pRent.TabIndex = 6;
             this.pRent.TabStop = false;
-            this.toolTip1.SetToolTip(this.pRent, "Rent the house");
-            this.pRent.Click += new System.EventHandler(this.pRent_Click);
+            this.toolTip1.SetToolTip(this.pRent, "Only agent can acces");
+            // 
+            // pReturn
+            // 
+            this.pReturn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pReturn.Cursor = System.Windows.Forms.Cursors.No;
+            this.pReturn.Image = ((System.Drawing.Image)(resources.GetObject("pReturn.Image")));
+            this.pReturn.Location = new System.Drawing.Point(603, 31);
+            this.pReturn.Name = "pReturn";
+            this.pReturn.Size = new System.Drawing.Size(69, 60);
+            this.pReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pReturn.TabIndex = 7;
+            this.pReturn.TabStop = false;
+            this.toolTip1.SetToolTip(this.pReturn, "Only agent can acces");
             // 
             // pExit
             // 
@@ -269,20 +216,6 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
-            this.pExit.Click += new System.EventHandler(this.pExit_Click);
-            // 
-            // pReturn
-            // 
-            this.pReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pReturn.Image = ((System.Drawing.Image)(resources.GetObject("pReturn.Image")));
-            this.pReturn.Location = new System.Drawing.Point(603, 31);
-            this.pReturn.Name = "pReturn";
-            this.pReturn.Size = new System.Drawing.Size(69, 60);
-            this.pReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pReturn.TabIndex = 7;
-            this.pReturn.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReturn, "RETURN");
-            this.pReturn.Click += new System.EventHandler(this.pReturn_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -298,7 +231,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pHome, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.pAvailable, 2, 1);
             this.tableLayoutPanel3.Controls.Add(this.pAgent, 3, 1);
@@ -327,6 +260,17 @@
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
             // 
+            // luname
+            // 
+            this.luname.AutoSize = true;
+            this.luname.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.luname.ForeColor = System.Drawing.Color.Coral;
+            this.luname.Location = new System.Drawing.Point(54, 0);
+            this.luname.Name = "luname";
+            this.luname.Size = new System.Drawing.Size(88, 46);
+            this.luname.TabIndex = 0;
+            this.luname.Text = "\r\nUsername";
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -342,16 +286,12 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(147, 47);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // luname
+            // toolTip1
             // 
-            this.luname.AutoSize = true;
-            this.luname.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.luname.ForeColor = System.Drawing.Color.Coral;
-            this.luname.Location = new System.Drawing.Point(54, 0);
-            this.luname.Name = "luname";
-            this.luname.Size = new System.Drawing.Size(88, 46);
-            this.luname.TabIndex = 0;
-            this.luname.Text = "\r\nUsername";
+            this.toolTip1.AutomaticDelay = 10;
+            this.toolTip1.AutoPopDelay = 0;
+            this.toolTip1.InitialDelay = 0;
+            this.toolTip1.ReshowDelay = 2;
             // 
             // tableLayoutPanel1
             // 
@@ -359,15 +299,138 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 9);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.06897F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
-            this.tableLayoutPanel1.TabIndex = 4;
+            this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // agent_clint_details
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(71, 126);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(709, 123);
+            this.listView1.TabIndex = 45;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Agent name";
+            this.columnHeader1.Width = 128;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Managing Area";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 174;
+            // 
+            // comboagentname
+            // 
+            this.comboagentname.FormattingEnabled = true;
+            this.comboagentname.Location = new System.Drawing.Point(449, 46);
+            this.comboagentname.Name = "comboagentname";
+            this.comboagentname.Size = new System.Drawing.Size(121, 21);
+            this.comboagentname.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(319, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 16);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Search Details ";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Contact number";
+            this.columnHeader3.Width = 107;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Username";
+            this.columnHeader4.Width = 115;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Password";
+            this.columnHeader5.Width = 137;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(576, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Show Details";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.listView2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.GridLines = true;
+            this.listView2.LabelEdit = true;
+            this.listView2.Location = new System.Drawing.Point(71, 126);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(709, 167);
+            this.listView2.TabIndex = 49;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Visible = false;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "House Number";
+            this.columnHeader6.Width = 128;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "House Address";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 298;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Clint name";
+            this.columnHeader8.Width = 118;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Booking Date";
+            this.columnHeader9.Width = 157;
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(65, 91);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(171, 32);
+            this.l1.TabIndex = 50;
+            this.l1.Text = "Agent Details";
+            // 
+            // manager_agent_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,21 +441,21 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "agent_clint_details";
+            this.Name = "manager_agent_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_clint_details";
-            this.Load += new System.EventHandler(this.agent_clint_details_Load);
+            this.Text = "manager_agent_details";
+            this.Load += new System.EventHandler(this.manager_agent_details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAddHouse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pClint)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pClint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -405,29 +468,37 @@
 
         #endregion
 
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pHome;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pAvailable;
         private System.Windows.Forms.PictureBox pAgent;
         private System.Windows.Forms.PictureBox pAddHouse;
         private System.Windows.Forms.PictureBox pReser;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pClint;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pRent;
-        private System.Windows.Forms.PictureBox pExit;
         private System.Windows.Forms.PictureBox pReturn;
+        private System.Windows.Forms.PictureBox pExit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label luname;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboclint;
-        private System.Windows.Forms.Button btnchkDetail;
+        private System.Windows.Forms.ComboBox comboagentname;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.Label l1;
     }
 }

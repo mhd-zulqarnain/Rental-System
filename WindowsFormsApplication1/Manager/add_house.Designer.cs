@@ -180,6 +180,7 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
+            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 

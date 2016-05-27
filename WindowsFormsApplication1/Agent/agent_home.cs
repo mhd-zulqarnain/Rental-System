@@ -26,12 +26,13 @@ namespace WindowsFormsApplication1.Agent
         private void agent_home_Load(object sender, EventArgs e)
         {
             label1.Text =username;
+            
         }
 
         private void pRent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new rent("\n"+username);
+            var form = new rent(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -44,7 +45,7 @@ namespace WindowsFormsApplication1.Agent
         private void pAvailable_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new available_houses("\n" + username);
+            var form = new available_houses(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -60,9 +61,27 @@ namespace WindowsFormsApplication1.Agent
         private void pReturn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_return("\n" + username);
+            var form = new agent_return(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pClint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new agent_clint_details(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pHome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

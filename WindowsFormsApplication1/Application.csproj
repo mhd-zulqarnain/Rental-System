@@ -80,11 +80,23 @@
     <Compile Include="Manager\add_house.Designer.cs">
       <DependentUpon>add_house.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\manager_agent_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\manager_agent_details.Designer.cs">
+      <DependentUpon>manager_agent_details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\manager_home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manager\manager_home.Designer.cs">
       <DependentUpon>manager_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\manger_clint_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\manger_clint_details.Designer.cs">
+      <DependentUpon>manger_clint_details.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,8 +124,14 @@
     <EmbeddedResource Include="Manager\add_house.resx">
       <DependentUpon>add_house.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manager\manager_agent_details.resx">
+      <DependentUpon>manager_agent_details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manager\manager_home.resx">
       <DependentUpon>manager_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\manger_clint_details.resx">
+      <DependentUpon>manger_clint_details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

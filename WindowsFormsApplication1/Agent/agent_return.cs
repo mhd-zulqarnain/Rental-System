@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1.Agent
     public partial class agent_return : Form
     {
         sign_in a = new sign_in();
+        agent_home h = new agent_home();
         string username;
         public agent_return()
         {
@@ -35,6 +36,9 @@ namespace WindowsFormsApplication1.Agent
                 comboclint.Items.Add(red[0].ToString());
 
             }
+            luname.Text = username;
+            textBox1.Text = username;
+            
         }
 
         private void btnGetRec_Click(object sender, EventArgs e)
@@ -83,7 +87,7 @@ namespace WindowsFormsApplication1.Agent
         private void pHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_home("\n" + username);
+            var form = new agent_home(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -91,7 +95,7 @@ namespace WindowsFormsApplication1.Agent
         private void pAvailable_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new available_houses("\n" + username);
+            var form = new available_houses(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -99,7 +103,7 @@ namespace WindowsFormsApplication1.Agent
         private void pClint_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_clint_details("\n" + username);
+            var form = new agent_clint_details(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -107,7 +111,7 @@ namespace WindowsFormsApplication1.Agent
         private void pRent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new rent("\n" + username);
+            var form = new rent(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -123,6 +127,11 @@ namespace WindowsFormsApplication1.Agent
             var form = new sign_in();
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void luname_Click(object sender, EventArgs e)
+        {
+
         }
         }
     }

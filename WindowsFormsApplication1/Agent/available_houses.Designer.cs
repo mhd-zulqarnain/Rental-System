@@ -181,7 +181,7 @@
             // 
             // pAvailable
             // 
-            this.pAvailable.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pAvailable.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pAvailable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pAvailable.Image = ((System.Drawing.Image)(resources.GetObject("pAvailable.Image")));
             this.pAvailable.Location = new System.Drawing.Point(153, 31);
@@ -243,6 +243,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // pRent
             // 
@@ -268,6 +269,7 @@
             this.pReturn.TabIndex = 7;
             this.pReturn.TabStop = false;
             this.toolTip1.SetToolTip(this.pReturn, "RETURN");
+            this.pReturn.Click += new System.EventHandler(this.pReturn_Click);
             // 
             // pExit
             // 
@@ -280,6 +282,7 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
+            this.pExit.Click += new System.EventHandler(this.pExit_Click);
             // 
             // toolTip1
             // 
@@ -353,11 +356,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "available_houses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "available_houses";
             this.Load += new System.EventHandler(this.available_houses_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

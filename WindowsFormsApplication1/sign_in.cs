@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
 {
     public partial class sign_in : Form
     {
+        
         public sign_in()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace WindowsFormsApplication1
                         var form = new agent_home(red[1].ToString());
                         form.Closed += (s, args) => this.Close();
                         form.Show();
+                        
                     }
                     else
                         MessageBox.Show("invalid Password");

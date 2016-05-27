@@ -188,6 +188,7 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
+            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 
@@ -253,6 +254,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // pRent
             // 
@@ -278,6 +280,7 @@
             this.pReturn.TabIndex = 7;
             this.pReturn.TabStop = false;
             this.toolTip1.SetToolTip(this.pReturn, "RETURN");
+            this.pReturn.Click += new System.EventHandler(this.pReturn_Click);
             // 
             // pExit
             // 

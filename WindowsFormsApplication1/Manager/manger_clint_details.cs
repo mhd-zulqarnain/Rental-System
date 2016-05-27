@@ -9,28 +9,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Agent
+namespace WindowsFormsApplication1.Manager
 {
-    public partial class agent_clint_details : Form
+    public partial class manger_clint_details : Form
     {
-        sign_in a = new sign_in();
         string username;
-        public agent_clint_details()
+        sign_in a = new sign_in();
+        public manger_clint_details()
         {
             InitializeComponent();
         }
-        public agent_clint_details( string u)
+        public manger_clint_details( string u)
         {
             InitializeComponent();
             this.username = u;
         }
-        private void agent_clint_details_Load(object sender, EventArgs e)
+
+        private void manger_clint_details_Load(object sender, EventArgs e)
         {
+            
             a.conn.Open();
             begin();
             luname.Text = username;
         }
-
         public void begin()
         {
 
@@ -64,65 +65,6 @@ namespace WindowsFormsApplication1.Agent
 
             } if (listView1.Items.Count == 0)
                 MessageBox.Show("NO HOUSE BOOKINGS");
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new sign_in();
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new agent_home(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pAvailable_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new available_houses(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pRent_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new rent(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pReturn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new agent_return(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pClint_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new agent_clint_details(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
