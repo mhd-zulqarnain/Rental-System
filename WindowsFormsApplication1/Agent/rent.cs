@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Report;
 
 
 namespace WindowsFormsApplication1.Agent
@@ -233,6 +234,7 @@ namespace WindowsFormsApplication1.Agent
                     cmd.ExecuteNonQuery();
                     OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" +id + "','" + Hnum + "','" + d + "'); ", a.conn);
                     rmd.ExecuteNonQuery();
+                    btnScript.Enabled = true;
 
 
                 }
@@ -246,10 +248,12 @@ namespace WindowsFormsApplication1.Agent
                         OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" + Convert.ToInt16(rd[0]) + "','" + Hnum + "','" + d + "'); ", a.conn);
                         rmd.ExecuteNonQuery();
                     }
+                    btnScript.Enabled = true;
                 }
                 else
                 {
                     MessageBox.Show("Fill all Tables");
+                    btnScript.Enabled = false;
                 }
 
                    OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
@@ -317,7 +321,7 @@ namespace WindowsFormsApplication1.Agent
             lcus.Visible = true;
             lnic.Visible = true;
             ladres.Visible = true;
-            comboCus.Visible = true;
+          
 
         }
         void oldCUs_in_Visible()
@@ -330,7 +334,7 @@ namespace WindowsFormsApplication1.Agent
             lcus.Visible = false;
             lnic.Visible = false;
             ladres.Visible = false;
-            comboCus.Visible = false;
+            
         }
         void newCus_visible()
         {
@@ -346,6 +350,12 @@ namespace WindowsFormsApplication1.Agent
         private void pRent_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnScript_Click(object sender, EventArgs e)
+        {
+            Clint_Script sc = new Clint_Script(Convert.ToInt32(houseBox.Text));
+            sc.Show();
         }
         
     }

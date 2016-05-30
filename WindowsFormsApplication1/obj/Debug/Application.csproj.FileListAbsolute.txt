@@ -17,3 +17,14 @@ C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplicatio
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manager_agent_details.resources
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manger_clint_details.resources
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manager_avliablehouse.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\ANDB.accdb
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\Clint_Script.resx
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\Clint_Script.cs
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\Clint_Script.Designer.cs
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\DataSet1.Designer.cs
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\DataSet1.xsc
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\DataSet1.xsd
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\bin\Debug\Report\DataSet1.xss
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.Clint_Script.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\RdlCompile.cache
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled

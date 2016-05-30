@@ -69,6 +69,7 @@
             this.ladres = new System.Windows.Forms.Label();
             this.tbxadrs = new System.Windows.Forms.TextBox();
             this.comboarea = new System.Windows.Forms.ComboBox();
+            this.btnScript = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -355,6 +356,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnScript);
             this.groupBox1.Controls.Add(this.combocusName);
             this.groupBox1.Controls.Add(this.lCcus);
             this.groupBox1.Controls.Add(this.listView1);
@@ -536,6 +538,17 @@
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 37;
             // 
+            // btnScript
+            // 
+            this.btnScript.Enabled = false;
+            this.btnScript.Location = new System.Drawing.Point(49, 243);
+            this.btnScript.Name = "btnScript";
+            this.btnScript.Size = new System.Drawing.Size(126, 29);
+            this.btnScript.TabIndex = 42;
+            this.btnScript.Text = "Generate Script";
+            this.btnScript.UseVisualStyleBackColor = true;
+            this.btnScript.Click += new System.EventHandler(this.btnScript_Click);
+            // 
             // rent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +627,7 @@
         private System.Windows.Forms.Label ladres;
         private System.Windows.Forms.TextBox tbxadrs;
         private System.Windows.Forms.ComboBox comboarea;
+        private System.Windows.Forms.Button btnScript;
 
     }
 }
