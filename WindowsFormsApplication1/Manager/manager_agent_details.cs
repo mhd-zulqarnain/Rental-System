@@ -87,5 +87,50 @@ namespace WindowsFormsApplication1.Manager
 
 
         }
+
+        private void pHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manager_home(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manager_avliablehouse(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pAddHouse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new add_house(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pClint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manger_clint_details(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new sign_in();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }

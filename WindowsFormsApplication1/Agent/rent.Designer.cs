@@ -47,23 +47,28 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboCus = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.combocusName = new System.Windows.Forms.ComboBox();
+            this.lCcus = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.comboarea = new System.Windows.Forms.ComboBox();
-            this.tbxDate = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.houseBox = new System.Windows.Forms.ComboBox();
-            this.tbxadrs = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbxnic = new System.Windows.Forms.TextBox();
             this.tbxCuName = new System.Windows.Forms.TextBox();
+            this.tbxnic = new System.Windows.Forms.TextBox();
+            this.tbxDate = new System.Windows.Forms.TextBox();
+            this.lHnu = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lcus = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lnic = new System.Windows.Forms.Label();
+            this.ladres = new System.Windows.Forms.Label();
+            this.tbxadrs = new System.Windows.Forms.TextBox();
+            this.comboarea = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -78,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lusername
@@ -268,6 +274,7 @@
             this.pRent.TabIndex = 6;
             this.pRent.TabStop = false;
             this.toolTip1.SetToolTip(this.pRent, "Rent the house");
+            this.pRent.Click += new System.EventHandler(this.pRent_Click);
             // 
             // pReturn
             // 
@@ -305,25 +312,88 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.comboCus);
             this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.comboarea);
-            this.panel1.Controls.Add(this.tbxDate);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.houseBox);
-            this.panel1.Controls.Add(this.tbxadrs);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.tbxnic);
-            this.panel1.Controls.Add(this.tbxCuName);
-            this.panel1.Location = new System.Drawing.Point(12, 199);
+            this.panel1.Location = new System.Drawing.Point(20, 187);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(820, 335);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(284, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 23);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Select";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboCus
+            // 
+            this.comboCus.FormattingEnabled = true;
+            this.comboCus.Items.AddRange(new object[] {
+            "new",
+            "Old"});
+            this.comboCus.Location = new System.Drawing.Point(132, 13);
+            this.comboCus.Name = "comboCus";
+            this.comboCus.Size = new System.Drawing.Size(144, 21);
+            this.comboCus.TabIndex = 41;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(537, 16);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.Text = "Search By Area";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.combocusName);
+            this.groupBox1.Controls.Add(this.lCcus);
+            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.houseBox);
+            this.groupBox1.Controls.Add(this.tbxCuName);
+            this.groupBox1.Controls.Add(this.tbxnic);
+            this.groupBox1.Controls.Add(this.tbxDate);
+            this.groupBox1.Controls.Add(this.lHnu);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lcus);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.lnic);
+            this.groupBox1.Controls.Add(this.ladres);
+            this.groupBox1.Controls.Add(this.tbxadrs);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(32, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(750, 292);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            // 
+            // combocusName
+            // 
+            this.combocusName.FormattingEnabled = true;
+            this.combocusName.Location = new System.Drawing.Point(164, 52);
+            this.combocusName.Name = "combocusName";
+            this.combocusName.Size = new System.Drawing.Size(144, 21);
+            this.combocusName.TabIndex = 41;
+            // 
+            // lCcus
+            // 
+            this.lCcus.AutoSize = true;
+            this.lCcus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lCcus.ForeColor = System.Drawing.Color.White;
+            this.lCcus.Location = new System.Drawing.Point(40, 53);
+            this.lCcus.Name = "lCcus";
+            this.lCcus.Size = new System.Drawing.Size(115, 16);
+            this.lCcus.TabIndex = 40;
+            this.lCcus.Text = "Customer name";
             // 
             // listView1
             // 
@@ -333,7 +403,7 @@
             this.columnHeader3});
             this.listView1.GridLines = true;
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(411, 55);
+            this.listView1.Location = new System.Drawing.Point(355, 19);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(371, 257);
             this.listView1.TabIndex = 39;
@@ -356,15 +426,107 @@
             this.columnHeader3.Text = "Price";
             this.columnHeader3.Width = 67;
             // 
-            // btnSearch
+            // houseBox
             // 
-            this.btnSearch.Location = new System.Drawing.Point(537, 16);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
-            this.btnSearch.TabIndex = 38;
-            this.btnSearch.Text = "Search By Area";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.houseBox.FormattingEnabled = true;
+            this.houseBox.Location = new System.Drawing.Point(163, 22);
+            this.houseBox.Name = "houseBox";
+            this.houseBox.Size = new System.Drawing.Size(144, 21);
+            this.houseBox.TabIndex = 32;
+            // 
+            // tbxCuName
+            // 
+            this.tbxCuName.Location = new System.Drawing.Point(163, 85);
+            this.tbxCuName.Name = "tbxCuName";
+            this.tbxCuName.Size = new System.Drawing.Size(144, 20);
+            this.tbxCuName.TabIndex = 25;
+            // 
+            // tbxnic
+            // 
+            this.tbxnic.Location = new System.Drawing.Point(163, 159);
+            this.tbxnic.Name = "tbxnic";
+            this.tbxnic.Size = new System.Drawing.Size(144, 20);
+            this.tbxnic.TabIndex = 26;
+            // 
+            // tbxDate
+            // 
+            this.tbxDate.Enabled = false;
+            this.tbxDate.Location = new System.Drawing.Point(163, 121);
+            this.tbxDate.Name = "tbxDate";
+            this.tbxDate.Size = new System.Drawing.Size(144, 20);
+            this.tbxDate.TabIndex = 36;
+            // 
+            // lHnu
+            // 
+            this.lHnu.AutoSize = true;
+            this.lHnu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lHnu.ForeColor = System.Drawing.Color.White;
+            this.lHnu.Location = new System.Drawing.Point(41, 24);
+            this.lHnu.Name = "lHnu";
+            this.lHnu.Size = new System.Drawing.Size(111, 16);
+            this.lHnu.TabIndex = 27;
+            this.lHnu.Text = "House Number";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(39, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 16);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Date of booking";
+            // 
+            // lcus
+            // 
+            this.lcus.AutoSize = true;
+            this.lcus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lcus.ForeColor = System.Drawing.Color.White;
+            this.lcus.Location = new System.Drawing.Point(38, 85);
+            this.lcus.Name = "lcus";
+            this.lcus.Size = new System.Drawing.Size(115, 16);
+            this.lcus.TabIndex = 28;
+            this.lcus.Text = "Customer name";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(181, 243);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 29);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "BOOK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // lnic
+            // 
+            this.lnic.AutoSize = true;
+            this.lnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnic.ForeColor = System.Drawing.Color.White;
+            this.lnic.Location = new System.Drawing.Point(38, 156);
+            this.lnic.Name = "lnic";
+            this.lnic.Size = new System.Drawing.Size(100, 16);
+            this.lnic.TabIndex = 29;
+            this.lnic.Text = "Customer Nic";
+            // 
+            // ladres
+            // 
+            this.ladres.AutoSize = true;
+            this.ladres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ladres.ForeColor = System.Drawing.Color.White;
+            this.ladres.Location = new System.Drawing.Point(41, 203);
+            this.ladres.Name = "ladres";
+            this.ladres.Size = new System.Drawing.Size(99, 16);
+            this.ladres.TabIndex = 30;
+            this.ladres.Text = "Clint address";
+            // 
+            // tbxadrs
+            // 
+            this.tbxadrs.Location = new System.Drawing.Point(163, 202);
+            this.tbxadrs.Name = "tbxadrs";
+            this.tbxadrs.Size = new System.Drawing.Size(144, 20);
+            this.tbxadrs.TabIndex = 31;
             // 
             // comboarea
             // 
@@ -373,108 +535,6 @@
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 37;
-            // 
-            // tbxDate
-            // 
-            this.tbxDate.Enabled = false;
-            this.tbxDate.Location = new System.Drawing.Point(215, 139);
-            this.tbxDate.Name = "tbxDate";
-            this.tbxDate.Size = new System.Drawing.Size(144, 20);
-            this.tbxDate.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(90, 142);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 16);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Date of booking";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(233, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 29);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "BOOK";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // houseBox
-            // 
-            this.houseBox.FormattingEnabled = true;
-            this.houseBox.Location = new System.Drawing.Point(215, 50);
-            this.houseBox.Name = "houseBox";
-            this.houseBox.Size = new System.Drawing.Size(144, 21);
-            this.houseBox.TabIndex = 32;
-            // 
-            // tbxadrs
-            // 
-            this.tbxadrs.Location = new System.Drawing.Point(215, 220);
-            this.tbxadrs.Name = "tbxadrs";
-            this.tbxadrs.Size = new System.Drawing.Size(144, 20);
-            this.tbxadrs.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(92, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 16);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Clint address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(89, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Customer Nic";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(89, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 16);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Customer name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(92, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 16);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "House Number";
-            // 
-            // tbxnic
-            // 
-            this.tbxnic.Location = new System.Drawing.Point(215, 177);
-            this.tbxnic.Name = "tbxnic";
-            this.tbxnic.Size = new System.Drawing.Size(144, 20);
-            this.tbxnic.TabIndex = 26;
-            // 
-            // tbxCuName
-            // 
-            this.tbxCuName.Location = new System.Drawing.Point(215, 103);
-            this.tbxCuName.Name = "tbxCuName";
-            this.tbxCuName.Size = new System.Drawing.Size(144, 20);
-            this.tbxCuName.TabIndex = 25;
             // 
             // rent
             // 
@@ -507,7 +567,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -531,23 +592,28 @@
         private System.Windows.Forms.PictureBox pReturn;
         private System.Windows.Forms.PictureBox pExit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox tbxDate;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox houseBox;
-        private System.Windows.Forms.TextBox tbxadrs;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbxnic;
-        private System.Windows.Forms.TextBox tbxCuName;
-        private System.Windows.Forms.ComboBox comboarea;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboCus;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox combocusName;
+        private System.Windows.Forms.Label lCcus;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ComboBox houseBox;
+        private System.Windows.Forms.TextBox tbxCuName;
+        private System.Windows.Forms.TextBox tbxnic;
+        private System.Windows.Forms.TextBox tbxDate;
+        private System.Windows.Forms.Label lHnu;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lcus;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lnic;
+        private System.Windows.Forms.Label ladres;
+        private System.Windows.Forms.TextBox tbxadrs;
+        private System.Windows.Forms.ComboBox comboarea;
 
     }
 }

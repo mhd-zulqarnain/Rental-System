@@ -94,5 +94,34 @@ namespace WindowsFormsApplication1.Manager
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manager_avliablehouse(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pAgent_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manager_agent_details(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pClint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new manger_clint_details(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

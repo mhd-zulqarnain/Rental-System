@@ -9,47 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Agent
+namespace WindowsFormsApplication1.Manager
 {
-    public partial class available_houses : Form
+    public partial class manager_avliablehouse : Form
     {
-        sign_in a = new sign_in();
         string username;
-        public available_houses()
+        sign_in a = new sign_in();
+        public manager_avliablehouse()
         {
             InitializeComponent();
         }
-        public available_houses(string u)
+        public manager_avliablehouse(String u)
         {
             InitializeComponent();
-            this.username =u;
+            this.username = u;
         }
-         public void populate(ListView listV, OleDbCommand cmd)
-        {
-            
-            try
-            {
-                listV.Items.Clear();
-                OleDbDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    ListViewItem li = new ListViewItem(reader[0].ToString());
-                    li.SubItems.Add(reader[1].ToString());
-                    li.SubItems.Add("$"+reader[2].ToString());
-                    listV.Items.Add(li);
 
-
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-             
-         }
-        private void available_houses_Load(object sender, EventArgs e)
+        private void manager_avliablehouse_Load(object sender, EventArgs e)
         {
             a.conn.Open();
             OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
@@ -67,7 +43,33 @@ namespace WindowsFormsApplication1.Agent
                 comboarea.Items.Add(red[2].ToString());
 
             }
-            
+
+        }
+
+        public void populate(ListView listV, OleDbCommand cmd)
+        {
+
+            try
+            {
+                listV.Items.Clear();
+                OleDbDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    ListViewItem li = new ListViewItem(reader[0].ToString());
+                    li.SubItems.Add(reader[1].ToString());
+                    li.SubItems.Add("$" + reader[2].ToString());
+                    listV.Items.Add(li);
+
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -82,55 +84,43 @@ namespace WindowsFormsApplication1.Agent
                 {
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
-                    li.SubItems.Add("$"+reader[2].ToString());
+                    li.SubItems.Add("$" + reader[2].ToString());
                     listView1.Items.Add(li);
+                    l1.Text = "Avaliable Houses at " + comboarea.Text;
                 }
 
 
             }
         }
 
-        private void pRent_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new rent( username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
         private void pHome_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_home(username);
+            var form = new manager_home(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pAgent_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new sign_in();
+            var form = new manager_agent_details(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
 
-        private void pAvailable_Click(object sender, EventArgs e)
+        private void pAddHouse_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            var form = new add_house(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
 
         private void pClint_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new agent_clint_details(username);
-            form.Closed += (s, args) => this.Close();
-            form.Show();
-        }
-
-        private void pReturn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var form = new agent_return(username);
+            var form = new manger_clint_details(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -139,5 +129,19 @@ namespace WindowsFormsApplication1.Agent
         {
             Application.Exit();
         }
+
+        private void pAvailable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new sign_in();
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
     }
 }

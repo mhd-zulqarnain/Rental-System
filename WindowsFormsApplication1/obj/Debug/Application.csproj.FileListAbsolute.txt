@@ -16,3 +16,4 @@ C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplicatio
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Agent.agent_return.resources
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manager_agent_details.resources
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manger_clint_details.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.manager_avliablehouse.resources

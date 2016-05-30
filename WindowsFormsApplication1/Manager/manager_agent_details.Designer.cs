@@ -38,6 +38,21 @@
             this.pReser = new System.Windows.Forms.PictureBox();
             this.pClint = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.l1 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboagentname = new System.Windows.Forms.ComboBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pRent = new System.Windows.Forms.PictureBox();
             this.pReturn = new System.Windows.Forms.PictureBox();
             this.pExit = new System.Windows.Forms.PictureBox();
@@ -47,21 +62,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboagentname = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.l1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgent)).BeginInit();
@@ -89,6 +89,7 @@
             this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "LOGOUT";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pHome
             // 
@@ -102,6 +103,7 @@
             this.pHome.TabIndex = 0;
             this.pHome.TabStop = false;
             this.toolTip1.SetToolTip(this.pHome, "Home");
+            this.pHome.Click += new System.EventHandler(this.pHome_Click);
             // 
             // pAvailable
             // 
@@ -115,6 +117,7 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
+            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -140,6 +143,7 @@
             this.pAddHouse.TabIndex = 3;
             this.pAddHouse.TabStop = false;
             this.toolTip1.SetToolTip(this.pAddHouse, "Add House");
+            this.pAddHouse.Click += new System.EventHandler(this.pAddHouse_Click);
             // 
             // pReser
             // 
@@ -164,6 +168,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // panel1
             // 
@@ -178,6 +183,129 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(820, 334);
             this.panel1.TabIndex = 6;
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(65, 91);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(171, 32);
+            this.l1.TabIndex = 50;
+            this.l1.Text = "Agent Details";
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.listView2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.GridLines = true;
+            this.listView2.LabelEdit = true;
+            this.listView2.Location = new System.Drawing.Point(71, 126);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(709, 167);
+            this.listView2.TabIndex = 49;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.Visible = false;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "House Number";
+            this.columnHeader6.Width = 128;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "House Address";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 298;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Clint name";
+            this.columnHeader8.Width = 118;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Booking Date";
+            this.columnHeader9.Width = 157;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(576, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 23);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Show Details";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(319, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 16);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Search Details ";
+            // 
+            // comboagentname
+            // 
+            this.comboagentname.FormattingEnabled = true;
+            this.comboagentname.Location = new System.Drawing.Point(449, 46);
+            this.comboagentname.Name = "comboagentname";
+            this.comboagentname.Size = new System.Drawing.Size(121, 21);
+            this.comboagentname.TabIndex = 46;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listView1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(71, 126);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(709, 123);
+            this.listView1.TabIndex = 45;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Agent name";
+            this.columnHeader1.Width = 128;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Managing Area";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 174;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Contact number";
+            this.columnHeader3.Width = 107;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Username";
+            this.columnHeader4.Width = 115;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Password";
+            this.columnHeader5.Width = 137;
             // 
             // pRent
             // 
@@ -216,6 +344,7 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
+            this.pExit.Click += new System.EventHandler(this.pExit_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -306,129 +435,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
             this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(71, 126);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(709, 123);
-            this.listView1.TabIndex = 45;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Agent name";
-            this.columnHeader1.Width = 128;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Managing Area";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 174;
-            // 
-            // comboagentname
-            // 
-            this.comboagentname.FormattingEnabled = true;
-            this.comboagentname.Location = new System.Drawing.Point(449, 46);
-            this.comboagentname.Name = "comboagentname";
-            this.comboagentname.Size = new System.Drawing.Size(121, 21);
-            this.comboagentname.TabIndex = 46;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(319, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 16);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Search Details ";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Contact number";
-            this.columnHeader3.Width = 107;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Username";
-            this.columnHeader4.Width = 115;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Password";
-            this.columnHeader5.Width = 137;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(576, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 23);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Show Details";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listView2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView2.GridLines = true;
-            this.listView2.LabelEdit = true;
-            this.listView2.Location = new System.Drawing.Point(71, 126);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(709, 167);
-            this.listView2.TabIndex = 49;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.Visible = false;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "House Number";
-            this.columnHeader6.Width = 128;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "House Address";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader7.Width = 298;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Clint name";
-            this.columnHeader8.Width = 118;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Booking Date";
-            this.columnHeader9.Width = 157;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(65, 91);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(171, 32);
-            this.l1.TabIndex = 50;
-            this.l1.Text = "Agent Details";
             // 
             // manager_agent_details
             // 

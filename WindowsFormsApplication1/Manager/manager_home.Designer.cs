@@ -155,6 +155,7 @@
             this.label3.Size = new System.Drawing.Size(60, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "LOGOUT";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pHome
             // 
@@ -194,6 +195,7 @@
             this.pAgent.TabIndex = 2;
             this.pAgent.TabStop = false;
             this.toolTip1.SetToolTip(this.pAgent, "Agent Details");
+            this.pAgent.Click += new System.EventHandler(this.pAgent_Click);
             // 
             // pAddHouse
             // 
@@ -231,6 +233,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // pRent
             // 
@@ -282,10 +285,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "manager_home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "manager_home";
             this.Load += new System.EventHandler(this.manager_home_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

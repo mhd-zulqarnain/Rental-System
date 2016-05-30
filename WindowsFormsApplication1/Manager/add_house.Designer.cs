@@ -47,6 +47,7 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.l1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboArea = new System.Windows.Forms.ComboBox();
@@ -194,6 +195,7 @@
             this.pAvailable.TabIndex = 1;
             this.pAvailable.TabStop = false;
             this.toolTip1.SetToolTip(this.pAvailable, "Avaliable\r\n  Houses");
+            this.pAvailable.Click += new System.EventHandler(this.pAvailable_Click);
             // 
             // pAgent
             // 
@@ -206,6 +208,7 @@
             this.pAgent.TabIndex = 2;
             this.pAgent.TabStop = false;
             this.toolTip1.SetToolTip(this.pAgent, "Agent Details");
+            this.pAgent.Click += new System.EventHandler(this.pAgent_Click);
             // 
             // pAddHouse
             // 
@@ -242,6 +245,7 @@
             this.pClint.TabIndex = 5;
             this.pClint.TabStop = false;
             this.toolTip1.SetToolTip(this.pClint, "Clints\r\nDetails");
+            this.pClint.Click += new System.EventHandler(this.pClint_Click);
             // 
             // pRent
             // 
@@ -280,6 +284,7 @@
             this.pExit.TabIndex = 8;
             this.pExit.TabStop = false;
             this.toolTip1.SetToolTip(this.pExit, "Exit");
+            this.pExit.Click += new System.EventHandler(this.pExit_Click);
             // 
             // toolTip1
             // 
@@ -291,6 +296,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.l1);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboArea);
@@ -305,11 +312,25 @@
             this.panel1.Size = new System.Drawing.Size(820, 334);
             this.panel1.TabIndex = 4;
             // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Old English Text MT", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(208, 24);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(352, 77);
+            this.l1.TabIndex = 51;
+            this.l1.Text = "Add Houses";
+            // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(384, 293);
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Ivory;
+            this.btnAdd.Location = new System.Drawing.Point(489, 273);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(101, 39);
             this.btnAdd.TabIndex = 45;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -318,82 +339,87 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(157, 237);
+            this.label4.Location = new System.Drawing.Point(232, 235);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(51, 18);
             this.label4.TabIndex = 44;
             this.label4.Text = "AREA";
             // 
             // comboArea
             // 
+            this.comboArea.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboArea.FormattingEnabled = true;
-            this.comboArea.Location = new System.Drawing.Point(221, 232);
+            this.comboArea.Location = new System.Drawing.Point(322, 234);
             this.comboArea.Name = "comboArea";
-            this.comboArea.Size = new System.Drawing.Size(121, 21);
+            this.comboArea.Size = new System.Drawing.Size(149, 26);
             this.comboArea.TabIndex = 43;
             // 
             // comboPric
             // 
+            this.comboPric.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPric.FormattingEnabled = true;
             this.comboPric.Items.AddRange(new object[] {
             "1800",
             "1300",
             "1500",
             "1400"});
-            this.comboPric.Location = new System.Drawing.Point(221, 177);
+            this.comboPric.Location = new System.Drawing.Point(322, 172);
             this.comboPric.Name = "comboPric";
-            this.comboPric.Size = new System.Drawing.Size(121, 21);
+            this.comboPric.Size = new System.Drawing.Size(149, 26);
             this.comboPric.TabIndex = 42;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(141, 177);
+            this.label2.Location = new System.Drawing.Point(216, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(70, 18);
             this.label2.TabIndex = 41;
             this.label2.Text = "PRICE $";
             // 
             // tbxAdress
             // 
-            this.tbxAdress.Location = new System.Drawing.Point(221, 207);
+            this.tbxAdress.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxAdress.Location = new System.Drawing.Point(322, 202);
             this.tbxAdress.Multiline = true;
             this.tbxAdress.Name = "tbxAdress";
-            this.tbxAdress.Size = new System.Drawing.Size(294, 19);
+            this.tbxAdress.Size = new System.Drawing.Size(324, 26);
             this.tbxAdress.TabIndex = 40;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(125, 207);
+            this.label5.Location = new System.Drawing.Point(200, 205);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 16);
+            this.label5.Size = new System.Drawing.Size(84, 18);
             this.label5.TabIndex = 39;
             this.label5.Text = "ADDRESS";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(95, 147);
+            this.label6.Location = new System.Drawing.Point(170, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.Size = new System.Drawing.Size(146, 18);
             this.label6.TabIndex = 38;
             this.label6.Text = "House Number";
             // 
             // tbxhnum
             // 
             this.tbxhnum.Enabled = false;
-            this.tbxhnum.Location = new System.Drawing.Point(221, 144);
+            this.tbxhnum.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxhnum.Location = new System.Drawing.Point(322, 128);
+            this.tbxhnum.Multiline = true;
             this.tbxhnum.Name = "tbxhnum";
-            this.tbxhnum.Size = new System.Drawing.Size(144, 20);
+            this.tbxhnum.Size = new System.Drawing.Size(238, 32);
             this.tbxhnum.TabIndex = 37;
             // 
             // add_house
@@ -460,5 +486,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbxhnum;
+        private System.Windows.Forms.Label l1;
     }
 }

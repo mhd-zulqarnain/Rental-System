@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApplication1.Agent
 {
     public partial class rent : Form
     {
         sign_in a = new sign_in();
         string username;
+        int id;
         public rent()
         {
             InitializeComponent();
@@ -60,15 +62,16 @@ namespace WindowsFormsApplication1.Agent
             begin();
             lusername.Text = username;
         }
-        
-        
-        public void begin() {
+
+
+        public void begin()
+        {
             OleDbCommand com = new OleDbCommand("SELECT house_details.house_number FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
             OleDbDataReader rd = com.ExecuteReader();
             while (rd.Read())
             {
                 houseBox.Items.Add(rd[0].ToString());
-                
+
             }
             rd.Close();
 
@@ -82,7 +85,7 @@ namespace WindowsFormsApplication1.Agent
 
             }
             rd.Close();
-            
+
         }
         
         
@@ -110,13 +113,12 @@ namespace WindowsFormsApplication1.Agent
                     cmd.Parameters.AddWithValue("@p1", id);
                     cmd.Parameters.AddWithValue("@p2", cname);
                     cmd.Parameters.AddWithValue("@p3", cAdress);
-                    cmd.Parameters.AddWithValue("@p4", Hnum);
+                    cmd.Parameters.AddWithValue("@p4", cNic);
                     cmd.ExecuteNonQuery();
                     OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" + id + "','" + Hnum + "','" + d + "'); ", a.conn);
                     rmd.ExecuteNonQuery();
 
-                    MessageBox.Show("house booked");
-                    clearBox();
+
                 }
                 else
                 {
@@ -131,6 +133,7 @@ namespace WindowsFormsApplication1.Agent
         void clearBox(){
             tbxCuName.Clear();
             tbxnic.Clear();
+            
             
         
         }
@@ -163,6 +166,7 @@ namespace WindowsFormsApplication1.Agent
         private void pExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            a.conn.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -204,5 +208,145 @@ namespace WindowsFormsApplication1.Agent
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+             
+            String cname = tbxCuName.Text;
+            String cAdress = tbxadrs.Text;
+            String cNic = tbxnic.Text;
+            String Hnum = houseBox.Text;
+            String d = DateTime.Now.ToShortDateString();
+            Random r = new Random();
+            id = r.Next(200, 999);
+
+            try
+            {
+                if (cname != "" && cAdress != "" && cNic != "" && Hnum != ""&& comboCus.Text=="new") //&& comboCus.Text=="new"
+                {
+                    
+                    OleDbCommand cmd = new OleDbCommand("Insert into clint_details(CID,clint_name,clint_address,clint_nic) values(?,?,?,?); ", a.conn);
+                    cmd.Parameters.AddWithValue("@p1",id);
+                    cmd.Parameters.AddWithValue("@p2", cname);
+                    cmd.Parameters.AddWithValue("@p3", cAdress);
+                    cmd.Parameters.AddWithValue("@p4", cNic);
+                    cmd.ExecuteNonQuery();
+                    OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" +id + "','" + Hnum + "','" + d + "'); ", a.conn);
+                    rmd.ExecuteNonQuery();
+
+
+                }
+                else if (comboCus.Text == "Old")
+                {
+                    OleDbCommand cmd = new OleDbCommand("Select* from clint_details where clint_name='" + combocusName.Text + "'", a.conn);
+                    OleDbDataReader rd = cmd.ExecuteReader();
+                    //int iid = Convert.ToInt16(rd[0]);
+                    if (rd.Read())
+                    {
+                        OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" + Convert.ToInt16(rd[0]) + "','" + Hnum + "','" + d + "'); ", a.conn);
+                        rmd.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Fill all Tables");
+                }
+
+                   OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
+            populate(listView1, cm);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+             listView1.Items.Clear();
+            OleDbCommand cm = new OleDbCommand(" SELECT house_details.house_number, house_details.house_address, house_details.house_price, house_details.agent_id, house_details.area FROM house_details LEFT JOIN booking_details ON house_details.house_number = booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
+            //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
+            OleDbDataReader reader = cm.ExecuteReader();
+            while (reader.Read())
+            {
+                if (comboarea.Text == reader[4].ToString())
+                {
+                    ListViewItem li = new ListViewItem(reader[0].ToString());
+                    li.SubItems.Add(reader[1].ToString());
+                    listView1.Items.Add(li);
+                }
+
+
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+             groupBox1.Enabled = true;
+            if (comboCus.Text == "new")
+            {
+                oldCUs_Visible();
+                newCus_In_visible();
+                
+            }
+            else if (comboCus.Text == "Old")
+            {
+                OleDbCommand cmd = new OleDbCommand("Select clint_name from clint_details", a.conn);
+                OleDbDataReader re = cmd.ExecuteReader();
+                while (re.Read())
+                {
+                    combocusName.Items.Add(re[0].ToString());
+                }
+                newCus_visible();
+                oldCUs_in_Visible();
+                
+            }
+            else if (comboCus.Text == "")
+            {
+                MessageBox.Show("select Customer");
+                groupBox1.Enabled = false;
+            }
+        }
+        void oldCUs_Visible()
+        {
+
+
+            tbxadrs.Visible = true;
+            tbxCuName.Visible = true;
+            tbxnic.Visible = true;
+            lcus.Visible = true;
+            lnic.Visible = true;
+            ladres.Visible = true;
+            comboCus.Visible = true;
+
+        }
+        void oldCUs_in_Visible()
+        {
+
+
+            tbxadrs.Visible = false;
+            tbxCuName.Visible = false;
+            tbxnic.Visible = false;
+            lcus.Visible = false;
+            lnic.Visible = false;
+            ladres.Visible = false;
+            comboCus.Visible = false;
+        }
+        void newCus_visible()
+        {
+            combocusName.Visible = true;
+            lCcus.Visible = true;
+        }
+        void newCus_In_visible()
+        {
+            combocusName.Visible = false;
+            lCcus.Visible = false;
+        }
+
+        private void pRent_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using WindowsFormsApplication1.Agent;
 using WindowsFormsApplication1.Manager;
 
+
 namespace WindowsFormsApplication1
 {
     static class Program
@@ -18,7 +19,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new manger_clint_details());
+            Application.Run(new agent_return());
         }
     }
 }
