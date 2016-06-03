@@ -134,6 +134,7 @@ namespace WindowsFormsApplication1.Agent
         void clearBox(){
             tbxCuName.Clear();
             tbxnic.Clear();
+            houseBox.Text = "";
             
             
         
@@ -267,6 +268,8 @@ namespace WindowsFormsApplication1.Agent
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
+            houseBox.Items.Clear();
+            houseBox.Text="";
              listView1.Items.Clear();
             OleDbCommand cm = new OleDbCommand(" SELECT house_details.house_number, house_details.house_address, house_details.house_price, house_details.agent_id, house_details.area FROM house_details LEFT JOIN booking_details ON house_details.house_number = booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
             //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
@@ -278,6 +281,7 @@ namespace WindowsFormsApplication1.Agent
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
                     listView1.Items.Add(li);
+                    houseBox.Items.Add(reader[0].ToString());
                 }
 
 
@@ -286,7 +290,9 @@ namespace WindowsFormsApplication1.Agent
 
         private void button2_Click(object sender, EventArgs e)
         {
+             groupBox1.Visible = true;
              groupBox1.Enabled = true;
+            
             if (comboCus.Text == "new")
             {
                 oldCUs_Visible();

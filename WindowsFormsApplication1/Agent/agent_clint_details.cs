@@ -47,6 +47,8 @@ namespace WindowsFormsApplication1.Agent
         private void btnchkDetail_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+            listView1.Visible = true;
+            
             OleDbCommand cm = new OleDbCommand(" SELECT clint_details.clint_name, clint_details.clint_nic, booking_details.house_number, house_details.house_address, house_details.house_price, booking_details.booking_date FROM house_details INNER JOIN (clint_details INNER JOIN booking_details ON clint_details.CID = booking_details.CID) ON house_details.house_number = booking_details.house_number; ", a.conn);
             //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
             OleDbDataReader reader = cm.ExecuteReader();

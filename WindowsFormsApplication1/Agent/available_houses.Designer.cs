@@ -53,6 +53,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new System.Windows.Forms.Button();
             this.comboarea = new System.Windows.Forms.ComboBox();
+            this.l1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -294,6 +295,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.l1);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.comboarea);
@@ -301,6 +303,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // listView1
             // 
@@ -311,9 +314,9 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(44, 64);
+            this.listView1.Location = new System.Drawing.Point(31, 104);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(724, 238);
+            this.listView1.Size = new System.Drawing.Size(729, 166);
             this.listView1.TabIndex = 43;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -336,9 +339,12 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(432, 35);
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Georgia", 9F);
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Location = new System.Drawing.Point(415, 45);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
+            this.btnSearch.Size = new System.Drawing.Size(106, 30);
             this.btnSearch.TabIndex = 42;
             this.btnSearch.Text = "Search By Area";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -346,11 +352,23 @@
             // 
             // comboarea
             // 
+            this.comboarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboarea.FormattingEnabled = true;
-            this.comboarea.Location = new System.Drawing.Point(533, 35);
+            this.comboarea.Location = new System.Drawing.Point(527, 52);
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 41;
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Pristina", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(50, 45);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(156, 35);
+            this.l1.TabIndex = 52;
+            this.l1.Text = "Avaliable House";
             // 
             // available_houses
             // 
@@ -383,6 +401,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -412,6 +431,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label l1;
 
     }
 }

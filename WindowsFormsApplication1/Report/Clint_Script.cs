@@ -26,14 +26,19 @@ namespace WindowsFormsApplication1.Report
         private void Clint_Script_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DataSet1.DataTable1' table. You can move, or remove it, as needed.
-            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1,housenumber);
+            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1, housenumber);
 
             this.reportViewer1.RefreshReport();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

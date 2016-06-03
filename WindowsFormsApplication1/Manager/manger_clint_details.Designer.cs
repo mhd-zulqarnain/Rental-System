@@ -47,6 +47,8 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.l1 = new System.Windows.Forms.Label();
             this.btnchkDetail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboclint = new System.Windows.Forms.ComboBox();
@@ -54,8 +56,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.l1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -297,16 +297,38 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.l1);
             this.panel1.Controls.Add(this.btnchkDetail);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboclint);
             this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(36, 227);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myriad Hebrew", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(130, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 42);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Select Clint Name to Know Details";
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(20, 64);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(174, 32);
+            this.l1.TabIndex = 51;
+            this.l1.Text = "Clints Details";
             // 
             // btnchkDetail
             // 
@@ -373,28 +395,6 @@
             // 
             this.columnHeader3.Text = "Price";
             this.columnHeader3.Width = 120;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(40, 48);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(174, 32);
-            this.l1.TabIndex = 51;
-            this.l1.Text = "Clints Details";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Hebrew", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(130, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(510, 42);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Select Clint Name to Know Details";
             // 
             // manger_clint_details
             // 

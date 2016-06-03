@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1.Manager
 {
@@ -58,7 +59,7 @@ namespace WindowsFormsApplication1.Manager
             listView2.Items.Clear();
             if (comboagentname.Text != "")
             {
-                
+                btnGenerate.Enabled = true;
                 OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price, clint_details.clint_name, booking_details.booking_date, agent_details.agent_name FROM (agent_details INNER JOIN house_details ON agent_details.agent_id = house_details.agent_id) INNER JOIN (clint_details INNER JOIN booking_details ON clint_details.CID = booking_details.CID) ON house_details.house_number = booking_details.house_number; ", a.conn);
                 //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
                 OleDbDataReader reader = cm.ExecuteReader();
@@ -131,6 +132,12 @@ namespace WindowsFormsApplication1.Manager
             var form = new sign_in();
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            agent_R_form sc = new agent_R_form(comboagentname.Text);
+            sc.Show();
         }
     }
 }

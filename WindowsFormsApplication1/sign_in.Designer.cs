@@ -36,12 +36,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxpass = new System.Windows.Forms.TextBox();
             this.tbxuName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.combotype);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSubmit);
@@ -49,9 +51,10 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbxpass);
             this.panel1.Controls.Add(this.tbxuName);
-            this.panel1.Location = new System.Drawing.Point(21, 50);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 218);
+            this.panel1.Size = new System.Drawing.Size(410, 239);
             this.panel1.TabIndex = 0;
             // 
             // combotype
@@ -127,16 +130,30 @@
             this.tbxuName.Size = new System.Drawing.Size(144, 20);
             this.tbxuName.TabIndex = 25;
             // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(126, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // sign_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(432, 325);
+            this.ClientSize = new System.Drawing.Size(410, 239);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "sign_in";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sign_in";
             this.Load += new System.EventHandler(this.sign_in_Load);
@@ -156,5 +173,6 @@
         private System.Windows.Forms.TextBox tbxuName;
         private System.Windows.Forms.ComboBox combotype;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

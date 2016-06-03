@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Report
 {
-    partial class Clint_Script
+    partial class agent_R_form
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clint_Script));
-            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSet1 = new WindowsFormsApplication1.Report.DataSet1();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agent_R_form));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTable1TableAdapter = new WindowsFormsApplication1.Report.DataSet1TableAdapters.DataTable1TableAdapter();
+            this.DataSet1 = new WindowsFormsApplication1.Report.DataSet1();
+            this.agent_detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agent_detailsTableAdapter = new WindowsFormsApplication1.Report.DataSet1TableAdapters.agent_detailsTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agent_detailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // DataTable1BindingSource
+            // reportViewer1
             // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.DataSet1;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.agent_detailsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.Report.Agent_report.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(634, 269);
+            this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // DataSet1
             // 
@@ -52,48 +60,38 @@
             this.DataSet1.EnforceConstraints = false;
             this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // agent_detailsBindingSource
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.Report.clint_rep.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(402, 289);
-            this.reportViewer1.TabIndex = 0;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.agent_detailsBindingSource.DataMember = "agent_details";
+            this.agent_detailsBindingSource.DataSource = this.DataSet1;
             // 
-            // DataTable1TableAdapter
+            // agent_detailsTableAdapter
             // 
-            this.DataTable1TableAdapter.ClearBeforeFill = true;
+            this.agent_detailsTableAdapter.ClearBeforeFill = true;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(370, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(606, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Clint_Script
+            // agent_R_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(414, 301);
+            this.ClientSize = new System.Drawing.Size(634, 269);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.reportViewer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Clint_Script";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Clint_Script";
-            this.Load += new System.EventHandler(this.Clint_Script_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
+            this.Name = "agent_R_form";
+            this.Text = "agent_R_form";
+            this.Load += new System.EventHandler(this.agent_R_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agent_detailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -102,9 +100,9 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private System.Windows.Forms.BindingSource agent_detailsBindingSource;
         private DataSet1 DataSet1;
-        private DataSet1TableAdapters.DataTable1TableAdapter DataTable1TableAdapter;
+        private DataSet1TableAdapters.agent_detailsTableAdapter agent_detailsTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

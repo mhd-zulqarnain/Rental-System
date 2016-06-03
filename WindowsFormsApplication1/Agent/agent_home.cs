@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,10 @@ namespace WindowsFormsApplication1.Agent
     public partial class agent_home : Form
     {
         public string username;
+        int ava, ren, all;
+        OleDbCommand cmd;
+        OleDbDataReader read;
+        sign_in a = new sign_in();
         public agent_home()
         {
             InitializeComponent();
@@ -23,12 +28,35 @@ namespace WindowsFormsApplication1.Agent
             this.username = u;
            
         }
+        
         private void agent_home_Load(object sender, EventArgs e)
         {
-            label1.Text =username;
             
-        }
+            a.conn.Open();
+            label1.Text =username;
+            cmd =new OleDbCommand("Select Count(CID) from booking_details", a.conn);
+            read = cmd.ExecuteReader();
+            if (read.Read())
+            {
+                rent.Text = read[0].ToString();
+                ren =Convert.ToInt16( read[0].ToString());
+            }
 
+
+            cmd = new OleDbCommand("Select count(house_number) from house_details", a.conn);
+            read = cmd.ExecuteReader();
+            if(read.Read())
+            all = Convert.ToInt16(read[0].ToString());
+
+            laAVA.Text = Math.Abs(all - ren).ToString();
+            begin();
+        }
+        void begin() { 
+        cmd = new OleDbCommand("Select house_address from house_details", a.conn);
+        read = cmd.ExecuteReader();
+            if (read.Read())
+            lahouse1.Text = read[0].ToString();
+        }
         private void pRent_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -80,6 +108,11 @@ namespace WindowsFormsApplication1.Agent
         }
 
         private void pHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

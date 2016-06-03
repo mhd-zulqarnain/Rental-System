@@ -38,6 +38,7 @@
             this.pReser = new System.Windows.Forms.PictureBox();
             this.pClint = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.l1 = new System.Windows.Forms.Label();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -173,6 +174,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.btnGenerate);
             this.panel1.Controls.Add(this.l1);
             this.panel1.Controls.Add(this.listView2);
             this.panel1.Controls.Add(this.button1);
@@ -184,12 +186,23 @@
             this.panel1.Size = new System.Drawing.Size(820, 334);
             this.panel1.TabIndex = 6;
             // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Enabled = false;
+            this.btnGenerate.Location = new System.Drawing.Point(665, 290);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(115, 23);
+            this.btnGenerate.TabIndex = 51;
+            this.btnGenerate.Text = "Generate Report";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
             // l1
             // 
             this.l1.AutoSize = true;
             this.l1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(65, 91);
+            this.l1.Location = new System.Drawing.Point(65, 72);
             this.l1.Name = "l1";
             this.l1.Size = new System.Drawing.Size(171, 32);
             this.l1.TabIndex = 50;
@@ -205,7 +218,7 @@
             this.listView2.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.GridLines = true;
             this.listView2.LabelEdit = true;
-            this.listView2.Location = new System.Drawing.Point(71, 126);
+            this.listView2.Location = new System.Drawing.Point(71, 107);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(709, 167);
             this.listView2.TabIndex = 49;
@@ -274,7 +287,7 @@
             this.listView1.Font = new System.Drawing.Font("Segoe UI Emoji", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(71, 126);
+            this.listView1.Location = new System.Drawing.Point(71, 107);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(709, 123);
             this.listView1.TabIndex = 45;
@@ -506,5 +519,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Label l1;
+        private System.Windows.Forms.Button btnGenerate;
     }
 }

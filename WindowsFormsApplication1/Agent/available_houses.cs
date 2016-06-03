@@ -88,6 +88,7 @@ namespace WindowsFormsApplication1.Agent
 
 
             }
+            l1.Text = "Avaliable house at " + comboarea.Text;
         }
 
         private void pRent_Click(object sender, EventArgs e)
@@ -138,6 +139,11 @@ namespace WindowsFormsApplication1.Agent
         private void pExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

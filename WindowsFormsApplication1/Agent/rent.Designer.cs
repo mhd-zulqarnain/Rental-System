@@ -47,10 +47,8 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboCus = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnScript = new System.Windows.Forms.Button();
             this.combocusName = new System.Windows.Forms.ComboBox();
             this.lCcus = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -68,8 +66,12 @@
             this.lnic = new System.Windows.Forms.Label();
             this.ladres = new System.Windows.Forms.Label();
             this.tbxadrs = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboCus = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.comboarea = new System.Windows.Forms.ComboBox();
-            this.btnScript = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -313,46 +315,17 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.comboCus);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.comboarea);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(20, 187);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(820, 335);
             this.panel1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(284, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 23);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "Select";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // comboCus
-            // 
-            this.comboCus.FormattingEnabled = true;
-            this.comboCus.Items.AddRange(new object[] {
-            "new",
-            "Old"});
-            this.comboCus.Location = new System.Drawing.Point(132, 13);
-            this.comboCus.Name = "comboCus";
-            this.comboCus.Size = new System.Drawing.Size(144, 21);
-            this.comboCus.TabIndex = 41;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(537, 16);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(95, 23);
-            this.btnSearch.TabIndex = 38;
-            this.btnSearch.Text = "Search By Area";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // groupBox1
             // 
@@ -372,18 +345,37 @@
             this.groupBox1.Controls.Add(this.ladres);
             this.groupBox1.Controls.Add(this.tbxadrs);
             this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(32, 40);
+            this.groupBox1.Location = new System.Drawing.Point(32, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(750, 292);
+            this.groupBox1.Size = new System.Drawing.Size(750, 279);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // btnScript
+            // 
+            this.btnScript.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnScript.Enabled = false;
+            this.btnScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScript.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScript.ForeColor = System.Drawing.Color.Snow;
+            this.btnScript.Location = new System.Drawing.Point(49, 243);
+            this.btnScript.Name = "btnScript";
+            this.btnScript.Size = new System.Drawing.Size(126, 29);
+            this.btnScript.TabIndex = 42;
+            this.btnScript.Text = "Generate Script";
+            this.btnScript.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnScript.UseVisualStyleBackColor = true;
+            this.btnScript.Click += new System.EventHandler(this.btnScript_Click);
             // 
             // combocusName
             // 
+            this.combocusName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combocusName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combocusName.FormattingEnabled = true;
             this.combocusName.Location = new System.Drawing.Point(164, 52);
             this.combocusName.Name = "combocusName";
-            this.combocusName.Size = new System.Drawing.Size(144, 21);
+            this.combocusName.Size = new System.Drawing.Size(171, 21);
             this.combocusName.TabIndex = 41;
             // 
             // lCcus
@@ -407,7 +399,7 @@
             this.listView1.LabelEdit = true;
             this.listView1.Location = new System.Drawing.Point(355, 19);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(371, 257);
+            this.listView1.Size = new System.Drawing.Size(389, 253);
             this.listView1.TabIndex = 39;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -430,6 +422,8 @@
             // 
             // houseBox
             // 
+            this.houseBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.houseBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.houseBox.FormattingEnabled = true;
             this.houseBox.Location = new System.Drawing.Point(163, 22);
             this.houseBox.Name = "houseBox";
@@ -440,14 +434,14 @@
             // 
             this.tbxCuName.Location = new System.Drawing.Point(163, 85);
             this.tbxCuName.Name = "tbxCuName";
-            this.tbxCuName.Size = new System.Drawing.Size(144, 20);
+            this.tbxCuName.Size = new System.Drawing.Size(186, 20);
             this.tbxCuName.TabIndex = 25;
             // 
             // tbxnic
             // 
             this.tbxnic.Location = new System.Drawing.Point(163, 159);
             this.tbxnic.Name = "tbxnic";
-            this.tbxnic.Size = new System.Drawing.Size(144, 20);
+            this.tbxnic.Size = new System.Drawing.Size(161, 20);
             this.tbxnic.TabIndex = 26;
             // 
             // tbxDate
@@ -463,7 +457,7 @@
             this.lHnu.AutoSize = true;
             this.lHnu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lHnu.ForeColor = System.Drawing.Color.White;
-            this.lHnu.Location = new System.Drawing.Point(41, 24);
+            this.lHnu.Location = new System.Drawing.Point(39, 23);
             this.lHnu.Name = "lHnu";
             this.lHnu.Size = new System.Drawing.Size(111, 16);
             this.lHnu.TabIndex = 27;
@@ -493,11 +487,16 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
             this.button1.Location = new System.Drawing.Point(181, 243);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 29);
             this.button1.TabIndex = 33;
             this.button1.Text = "BOOK";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -517,7 +516,7 @@
             this.ladres.AutoSize = true;
             this.ladres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ladres.ForeColor = System.Drawing.Color.White;
-            this.ladres.Location = new System.Drawing.Point(41, 203);
+            this.ladres.Location = new System.Drawing.Point(7, 203);
             this.ladres.Name = "ladres";
             this.ladres.Size = new System.Drawing.Size(99, 16);
             this.ladres.TabIndex = 30;
@@ -525,29 +524,83 @@
             // 
             // tbxadrs
             // 
-            this.tbxadrs.Location = new System.Drawing.Point(163, 202);
+            this.tbxadrs.Location = new System.Drawing.Point(112, 202);
             this.tbxadrs.Name = "tbxadrs";
-            this.tbxadrs.Size = new System.Drawing.Size(144, 20);
+            this.tbxadrs.Size = new System.Drawing.Size(237, 20);
             this.tbxadrs.TabIndex = 31;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button2.ForeColor = System.Drawing.Color.Snow;
+            this.button2.Location = new System.Drawing.Point(287, 18);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 28);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "Select";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboCus
+            // 
+            this.comboCus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCus.FormattingEnabled = true;
+            this.comboCus.Items.AddRange(new object[] {
+            "new",
+            "Old"});
+            this.comboCus.Location = new System.Drawing.Point(122, 25);
+            this.comboCus.Name = "comboCus";
+            this.comboCus.Size = new System.Drawing.Size(144, 21);
+            this.comboCus.TabIndex = 41;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Snow;
+            this.btnSearch.Location = new System.Drawing.Point(512, 18);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 28);
+            this.btnSearch.TabIndex = 38;
+            this.btnSearch.Text = "Search By Area";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // comboarea
             // 
+            this.comboarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboarea.FormattingEnabled = true;
-            this.comboarea.Location = new System.Drawing.Point(638, 16);
+            this.comboarea.Location = new System.Drawing.Point(638, 23);
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 37;
             // 
-            // btnScript
+            // label1
             // 
-            this.btnScript.Enabled = false;
-            this.btnScript.Location = new System.Drawing.Point(49, 243);
-            this.btnScript.Name = "btnScript";
-            this.btnScript.Size = new System.Drawing.Size(126, 29);
-            this.btnScript.TabIndex = 42;
-            this.btnScript.Text = "Generate Script";
-            this.btnScript.UseVisualStyleBackColor = true;
-            this.btnScript.Click += new System.EventHandler(this.btnScript_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "CLINT TYPE";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Myriad Hebrew", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(83, 144);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(662, 45);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "Select Clint type  to show Booking Details";
             // 
             // rent
             // 
@@ -580,6 +633,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -615,7 +669,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ComboBox houseBox;
         private System.Windows.Forms.TextBox tbxCuName;
         private System.Windows.Forms.TextBox tbxnic;
         private System.Windows.Forms.TextBox tbxDate;
@@ -628,6 +681,9 @@
         private System.Windows.Forms.TextBox tbxadrs;
         private System.Windows.Forms.ComboBox comboarea;
         private System.Windows.Forms.Button btnScript;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox houseBox;
 
     }
 }

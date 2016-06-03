@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Agent;
 using WindowsFormsApplication1.Manager;
+using WindowsFormsApplication1.Report;
 
 
 namespace WindowsFormsApplication1
