@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1.Agent
     public partial class agent_home : Form
     {
         public string username;
-        int ava, ren, all;
+        int ren, all;
         OleDbCommand cmd;
         OleDbDataReader read;
         sign_in a = new sign_in();
@@ -52,10 +52,23 @@ namespace WindowsFormsApplication1.Agent
             begin();
         }
         void begin() { 
-        cmd = new OleDbCommand("Select house_address from house_details", a.conn);
+        cmd = new OleDbCommand("Select COUNT(CID) from clint_details", a.conn);
         read = cmd.ExecuteReader();
+        if (read.Read())
+        {
+            laCli.Text = read[0].ToString();
+
+        }
+            
+             cmd = new OleDbCommand("SELECT *  FROM house_details WHERE house_number=(SELECT LAST(house_number) FROM house_details)", a.conn);
+        
+            read = cmd.ExecuteReader();
             if (read.Read())
-            lahouse1.Text = read[0].ToString();
+            {
+                lahouse1.Text = read[1].ToString();
+
+            }
+        
         }
         private void pRent_Click(object sender, EventArgs e)
         {
