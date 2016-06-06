@@ -98,6 +98,12 @@
     <Compile Include="Manager\add_house.Designer.cs">
       <DependentUpon>add_house.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manager\maanger_rec_handle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\maanger_rec_handle.Designer.cs">
+      <DependentUpon>maanger_rec_handle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager\manager_agent_details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\add_house.resx">
       <DependentUpon>add_house.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\maanger_rec_handle.resx">
+      <DependentUpon>maanger_rec_handle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\manager_agent_details.resx">
       <DependentUpon>manager_agent_details.cs</DependentUpon>

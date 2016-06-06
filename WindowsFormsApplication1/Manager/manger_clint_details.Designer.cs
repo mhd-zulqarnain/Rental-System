@@ -47,7 +47,6 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.l1 = new System.Windows.Forms.Label();
             this.btnchkDetail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -234,6 +234,7 @@
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
             this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
             // 
@@ -307,17 +308,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myriad Hebrew", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(130, 170);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(510, 42);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "Select Clint Name to Know Details";
             // 
             // l1
             // 
@@ -395,6 +385,17 @@
             // 
             this.columnHeader3.Text = "Price";
             this.columnHeader3.Width = 120;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myriad Hebrew", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(130, 170);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 42);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Select Clint Name to Know Details";
             // 
             // manger_clint_details
             // 

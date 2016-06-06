@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.combotype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -36,13 +37,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxpass = new System.Windows.Forms.TextBox();
             this.tbxuName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.l1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.l1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.combotype);
             this.panel1.Controls.Add(this.label1);
@@ -54,8 +57,21 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 239);
+            this.panel1.Size = new System.Drawing.Size(418, 330);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(126, 244);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 34);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // combotype
             // 
@@ -63,7 +79,7 @@
             this.combotype.Items.AddRange(new object[] {
             "MANAGER",
             "AGENT"});
-            this.combotype.Location = new System.Drawing.Point(161, 134);
+            this.combotype.Location = new System.Drawing.Point(184, 192);
             this.combotype.Name = "combotype";
             this.combotype.Size = new System.Drawing.Size(121, 21);
             this.combotype.TabIndex = 32;
@@ -74,7 +90,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(51, 139);
+            this.label1.Location = new System.Drawing.Point(50, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 31;
@@ -85,7 +101,7 @@
             this.btnSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSubmit.Location = new System.Drawing.Point(236, 171);
+            this.btnSubmit.Location = new System.Drawing.Point(236, 244);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(104, 34);
             this.btnSubmit.TabIndex = 29;
@@ -98,7 +114,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 100);
+            this.label3.Location = new System.Drawing.Point(48, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 28;
@@ -109,7 +125,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 55);
+            this.label2.Location = new System.Drawing.Point(50, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 27;
@@ -117,7 +133,7 @@
             // 
             // tbxpass
             // 
-            this.tbxpass.Location = new System.Drawing.Point(161, 96);
+            this.tbxpass.Location = new System.Drawing.Point(183, 142);
             this.tbxpass.Name = "tbxpass";
             this.tbxpass.PasswordChar = '*';
             this.tbxpass.Size = new System.Drawing.Size(157, 20);
@@ -125,29 +141,28 @@
             // 
             // tbxuName
             // 
-            this.tbxuName.Location = new System.Drawing.Point(161, 54);
+            this.tbxuName.Location = new System.Drawing.Point(183, 83);
             this.tbxuName.Name = "tbxuName";
             this.tbxuName.Size = new System.Drawing.Size(144, 20);
             this.tbxuName.TabIndex = 25;
             // 
-            // button1
+            // l1
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(126, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(47, 15);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(119, 35);
+            this.l1.TabIndex = 52;
+            this.l1.Text = "LOGIN";
             // 
             // sign_in
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(410, 239);
+            this.ClientSize = new System.Drawing.Size(418, 330);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -174,5 +189,6 @@
         private System.Windows.Forms.ComboBox combotype;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label l1;
     }
 }

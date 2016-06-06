@@ -60,14 +60,6 @@ namespace WindowsFormsApplication1.Agent
 
         }
             
-             cmd = new OleDbCommand("SELECT *  FROM house_details WHERE house_number=(SELECT LAST(house_number) FROM house_details)", a.conn);
-        
-            read = cmd.ExecuteReader();
-            if (read.Read())
-            {
-                lahouse1.Text = read[1].ToString();
-
-            }
         
         }
         private void pRent_Click(object sender, EventArgs e)
@@ -126,6 +118,31 @@ namespace WindowsFormsApplication1.Agent
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            lableDes.Visible = false;
+            listView1.Items.Clear();
+            OleDbCommand cm = new OleDbCommand(" SELECT house_details.house_number, house_details.house_address, house_details.house_price, house_details.agent_id, house_details.area FROM house_details LEFT JOIN booking_details ON house_details.house_number = booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
+            //cmd.Parameters.AddWithValue("@p1", comboarea.Text);
+            OleDbDataReader reader = cm.ExecuteReader();
+            while (reader.Read())
+            {
+                if (comboarea.Text == reader[4].ToString())
+                {
+                    ListViewItem li = new ListViewItem(reader[0].ToString());
+                    li.SubItems.Add(reader[1].ToString());
+                    listView1.Items.Add(li);
+                }
+
+
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

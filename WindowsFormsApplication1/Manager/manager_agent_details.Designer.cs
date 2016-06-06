@@ -157,6 +157,7 @@
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
             this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
             // 

@@ -48,6 +48,10 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGetRec = new System.Windows.Forms.Button();
+            this.comboclint = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnreturn = new System.Windows.Forms.Button();
@@ -57,10 +61,6 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnGetRec = new System.Windows.Forms.Button();
-            this.comboclint = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -317,6 +317,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 335);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label8
             // 
@@ -328,6 +329,49 @@
             this.label8.Size = new System.Drawing.Size(174, 42);
             this.label8.TabIndex = 57;
             this.label8.Text = "Return Portial";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(274, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 22);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Clint Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(280, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 22);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "Clint Name";
+            // 
+            // btnGetRec
+            // 
+            this.btnGetRec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetRec.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetRec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGetRec.Location = new System.Drawing.Point(547, 42);
+            this.btnGetRec.Name = "btnGetRec";
+            this.btnGetRec.Size = new System.Drawing.Size(117, 30);
+            this.btnGetRec.TabIndex = 48;
+            this.btnGetRec.Text = "Get Record";
+            this.btnGetRec.UseVisualStyleBackColor = true;
+            this.btnGetRec.Click += new System.EventHandler(this.btnGetRec_Click);
+            // 
+            // comboclint
+            // 
+            this.comboclint.FormattingEnabled = true;
+            this.comboclint.Location = new System.Drawing.Point(382, 49);
+            this.comboclint.Name = "comboclint";
+            this.comboclint.Size = new System.Drawing.Size(141, 21);
+            this.comboclint.TabIndex = 47;
             // 
             // groupBox1
             // 
@@ -421,49 +465,6 @@
             this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "House number";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(274, 48);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 22);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Clint Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(280, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 22);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Clint Name";
-            // 
-            // btnGetRec
-            // 
-            this.btnGetRec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetRec.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetRec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGetRec.Location = new System.Drawing.Point(547, 42);
-            this.btnGetRec.Name = "btnGetRec";
-            this.btnGetRec.Size = new System.Drawing.Size(117, 30);
-            this.btnGetRec.TabIndex = 48;
-            this.btnGetRec.Text = "Get Record";
-            this.btnGetRec.UseVisualStyleBackColor = true;
-            this.btnGetRec.Click += new System.EventHandler(this.btnGetRec_Click);
-            // 
-            // comboclint
-            // 
-            this.comboclint.FormattingEnabled = true;
-            this.comboclint.Location = new System.Drawing.Point(382, 49);
-            this.comboclint.Name = "comboclint";
-            this.comboclint.Size = new System.Drawing.Size(141, 21);
-            this.comboclint.TabIndex = 47;
             // 
             // label6
             // 

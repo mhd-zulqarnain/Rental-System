@@ -45,6 +45,7 @@ namespace WindowsFormsApplication1.Agent
         {
             groupBox1.Enabled = true;
             groupBox1.Visible = true;
+            btnreturn.Enabled = true;
             listView1.Items.Clear();
             combohouse.Items.Clear();
             OleDbCommand cm = new OleDbCommand(" SELECT clint_details.clint_name, clint_details.clint_nic, booking_details.house_number, house_details.house_address, house_details.house_price, booking_details.booking_date FROM house_details INNER JOIN (clint_details INNER JOIN booking_details ON clint_details.CID = booking_details.CID) ON house_details.house_number = booking_details.house_number; ", a.conn);
@@ -134,6 +135,11 @@ namespace WindowsFormsApplication1.Agent
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

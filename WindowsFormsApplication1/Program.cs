@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new rent());
+            Application.Run(new agent_home());
         }
     }
 }

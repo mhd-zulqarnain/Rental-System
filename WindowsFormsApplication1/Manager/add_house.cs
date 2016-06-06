@@ -77,7 +77,10 @@ namespace WindowsFormsApplication1.Manager
         }
         void clearBox() {
             tbxAdress.Clear();
-            tbxhnum.Clear();
+            
+            Random rd = new Random();
+            housenumber = rd.Next(3000, 9999);
+            tbxhnum.Text = housenumber.ToString();
         }
         private void label3_Click(object sender, EventArgs e)
         {
@@ -122,6 +125,14 @@ namespace WindowsFormsApplication1.Manager
         private void pExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pReser_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new maanger_rec_handle(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
         }
     }
 }

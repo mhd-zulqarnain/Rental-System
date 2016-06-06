@@ -47,13 +47,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.l1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new System.Windows.Forms.Button();
             this.comboarea = new System.Windows.Forms.ComboBox();
-            this.l1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgent)).BeginInit();
@@ -149,6 +149,7 @@
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
             this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // toolTip1
             // 
@@ -305,6 +306,17 @@
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 10;
             // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Pristina", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(53, 28);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(156, 35);
+            this.l1.TabIndex = 51;
+            this.l1.Text = "Avaliable House";
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -354,17 +366,6 @@
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 41;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Pristina", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(53, 28);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(156, 35);
-            this.l1.TabIndex = 51;
-            this.l1.Text = "Avaliable House";
             // 
             // manager_avliablehouse
             // 
