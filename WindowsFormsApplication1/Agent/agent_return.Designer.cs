@@ -367,6 +367,7 @@
             // 
             // comboclint
             // 
+            this.comboclint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboclint.FormattingEnabled = true;
             this.comboclint.Location = new System.Drawing.Point(382, 49);
             this.comboclint.Name = "comboclint";
@@ -425,6 +426,7 @@
             // 
             // combohouse
             // 
+            this.combohouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combohouse.FormattingEnabled = true;
             this.combohouse.Location = new System.Drawing.Point(133, 76);
             this.combohouse.Name = "combohouse";

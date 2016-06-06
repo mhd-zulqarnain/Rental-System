@@ -48,7 +48,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnScript = new System.Windows.Forms.Button();
             this.combocusName = new System.Windows.Forms.ComboBox();
             this.lCcus = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -329,7 +328,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnScript);
             this.groupBox1.Controls.Add(this.combocusName);
             this.groupBox1.Controls.Add(this.lCcus);
             this.groupBox1.Controls.Add(this.listView1);
@@ -351,22 +349,6 @@
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
-            // 
-            // btnScript
-            // 
-            this.btnScript.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnScript.Enabled = false;
-            this.btnScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScript.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScript.ForeColor = System.Drawing.Color.Snow;
-            this.btnScript.Location = new System.Drawing.Point(49, 243);
-            this.btnScript.Name = "btnScript";
-            this.btnScript.Size = new System.Drawing.Size(126, 29);
-            this.btnScript.TabIndex = 42;
-            this.btnScript.Text = "Generate Script";
-            this.btnScript.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnScript.UseVisualStyleBackColor = true;
-            this.btnScript.Click += new System.EventHandler(this.btnScript_Click);
             // 
             // combocusName
             // 
@@ -680,7 +662,6 @@
         private System.Windows.Forms.Label ladres;
         private System.Windows.Forms.TextBox tbxadrs;
         private System.Windows.Forms.ComboBox comboarea;
-        private System.Windows.Forms.Button btnScript;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox houseBox;

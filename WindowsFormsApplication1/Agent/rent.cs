@@ -29,7 +29,8 @@ namespace WindowsFormsApplication1.Agent
         }
         public void populate(ListView listV, OleDbCommand cmd)
         {
-            
+
+            houseBox.Items.Clear();
             try
             {
                 listV.Items.Clear();
@@ -39,6 +40,8 @@ namespace WindowsFormsApplication1.Agent
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
                     listV.Items.Add(li);
+
+                    houseBox.Items.Add(reader[0].ToString());
 
 
                 }
@@ -67,14 +70,7 @@ namespace WindowsFormsApplication1.Agent
 
         public void begin()
         {
-            OleDbCommand com = new OleDbCommand("SELECT house_details.house_number FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);
-            OleDbDataReader rd = com.ExecuteReader();
-            while (rd.Read())
-            {
-                houseBox.Items.Add(rd[0].ToString());
-
-            }
-            rd.Close();
+           
 
             tbxDate.Text = DateTime.Now.ToString("MM.dd.yyy");
 
@@ -85,7 +81,6 @@ namespace WindowsFormsApplication1.Agent
                 comboarea.Items.Add(red[2].ToString());
 
             }
-            rd.Close();
 
         }
         
@@ -158,7 +153,6 @@ namespace WindowsFormsApplication1.Agent
                     ListViewItem li = new ListViewItem(reader[0].ToString());
                     li.SubItems.Add(reader[1].ToString());
                     listView1.Items.Add(li);
-                    houseBox.Items.Add(reader[0].ToString());
                 }
                 
 
@@ -221,7 +215,7 @@ namespace WindowsFormsApplication1.Agent
             String d = DateTime.Now.ToShortDateString();
             Random r = new Random();
             id = r.Next(200, 999);
-
+            DialogResult result;
             try
             {
                 if (cname != "" && cAdress != "" && cNic != "" && Hnum != ""&& comboCus.Text=="new") //&& comboCus.Text=="new"
@@ -235,8 +229,12 @@ namespace WindowsFormsApplication1.Agent
                     cmd.ExecuteNonQuery();
                     OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" +id + "','" + Hnum + "','" + d + "'); ", a.conn);
                     rmd.ExecuteNonQuery();
-                    btnScript.Enabled = true;
-
+                    result = MessageBox.Show("Do you want Generate Report?", "Question", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Clint_Script sc = new Clint_Script(Convert.ToInt32(houseBox.Text));
+                        sc.Show();
+                    }
 
                 }
                 else if (comboCus.Text == "Old")
@@ -249,12 +247,16 @@ namespace WindowsFormsApplication1.Agent
                         OleDbCommand rmd = new OleDbCommand("Insert into  booking_details(CID,house_number,booking_date) values('" + Convert.ToInt16(rd[0]) + "','" + Hnum + "','" + d + "'); ", a.conn);
                         rmd.ExecuteNonQuery();
                     }
-                    btnScript.Enabled = true;
+                    result = MessageBox.Show("Do you want Generate Report?", "Question", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes) {
+                        Clint_Script sc = new Clint_Script(Convert.ToInt32(houseBox.Text));
+                        sc.Show();
+                    }
                 }
+
                 else
                 {
                     MessageBox.Show("Fill all Tables");
-                    btnScript.Enabled = false;
                 }
 
                    OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);

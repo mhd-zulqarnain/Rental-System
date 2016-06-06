@@ -29,5 +29,5 @@ C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplicatio
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\RdlCompile.cache
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.agent_R_form.resources
-C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.Cl_Rep.resources
 C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Manager.maanger_rec_handle.resources
+C:\Users\zulup\Documents\Visual Studio 2012\Projects\ANDB\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.Clint_Rep.resources

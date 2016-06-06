@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Report
 {
-    partial class Cl_Rep
+    partial class Clint_Rep
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataSet1 = new WindowsFormsApplication1.Report.DataSet1();
             this.Clint_B_DetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSet1 = new WindowsFormsApplication1.Report.DataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Clint_B_DetTableAdapter = new WindowsFormsApplication1.Report.DataSet1TableAdapters.Clint_B_DetTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clint_B_DetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Clint_B_DetBindingSource
+            // 
+            this.Clint_B_DetBindingSource.DataMember = "Clint_B_Det";
+            this.Clint_B_DetBindingSource.DataSource = this.DataSet1;
+            this.Clint_B_DetBindingSource.CurrentChanged += new System.EventHandler(this.Clint_B_DetBindingSource_CurrentChanged);
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.EnforceConstraints = false;
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -49,33 +61,23 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(660, 275);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.EnforceConstraints = false;
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Clint_B_DetBindingSource
-            // 
-            this.Clint_B_DetBindingSource.DataMember = "Clint_B_Det";
-            this.Clint_B_DetBindingSource.DataSource = this.DataSet1;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // Clint_B_DetTableAdapter
             // 
             this.Clint_B_DetTableAdapter.ClearBeforeFill = true;
             // 
-            // Cl_Rep
+            // Clint_Rep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 275);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Cl_Rep";
+            this.Name = "Clint_Rep";
             this.Text = "Cl_Rep";
             this.Load += new System.EventHandler(this.Cl_Rep_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Clint_B_DetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

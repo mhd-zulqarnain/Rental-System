@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1.Agent
 {
@@ -125,6 +126,21 @@ namespace WindowsFormsApplication1.Agent
         private void pExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboclint.Text != "" && listView1.Items.Count > 0)
+            {
+                Clint_Rep d = new Clint_Rep(comboclint.Text);
+                d.Show();
+            }
+            else if (comboclint.Text != "" && listView1.Items.Count == 0)
+                MessageBox.Show("No reord to generate Report ");
+            else
+            {
+                MessageBox.Show("Select a name ");
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1.Manager
 {
@@ -124,6 +125,21 @@ namespace WindowsFormsApplication1.Manager
             var form = new maanger_rec_handle(username);
             form.Closed += (s, args) => this.Close();
             form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboclint.Text != ""&& listView1.Items.Count>0)
+            {
+                Clint_Rep d = new Clint_Rep(comboclint.Text);
+                d.Show();
+            }
+            else if (comboclint.Text != ""&& listView1.Items.Count==0)
+                MessageBox.Show("No reord to generate Report ");
+            else
+            {
+                MessageBox.Show("Select a name ");
+            }
         }
     }
 }

@@ -73,7 +73,7 @@ namespace WindowsFormsApplication1.Agent
 
         private void btnreturn_Click(object sender, EventArgs e)
         {
-            combohouse.Items.Clear();
+            
              OleDbCommand cm = new OleDbCommand("DELETE FROM booking_details where house_number=?", a.conn);
             cm.Parameters.AddWithValue("@p1", combohouse.Text);
             cm.ExecuteNonQuery();
@@ -81,6 +81,8 @@ namespace WindowsFormsApplication1.Agent
             MessageBox.Show("House returned");
             groupBox1.Enabled = false;
             listView1.Items.Clear();
+            combohouse.Items.Clear();
+          
             
         }
 
