@@ -47,6 +47,7 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.l1 = new System.Windows.Forms.Label();
             this.btnchkDetail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -311,6 +311,19 @@
             this.panel1.Size = new System.Drawing.Size(776, 317);
             this.panel1.TabIndex = 8;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(555, 277);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 32);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "Generate Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // l1
             // 
             this.l1.AutoSize = true;
@@ -348,6 +361,7 @@
             // 
             // comboclint
             // 
+            this.comboclint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboclint.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboclint.FormattingEnabled = true;
             this.comboclint.Location = new System.Drawing.Point(435, 48);
@@ -399,19 +413,6 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "Select Clint Name to Know Details";
             // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(555, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 32);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Generate Report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // manger_clint_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +422,7 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "manger_clint_details";

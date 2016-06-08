@@ -51,9 +51,9 @@ namespace WindowsFormsApplication1.Agent
             laAVA.Text = Math.Abs(all - ren).ToString();
             begin();
         }
-        void begin() { 
-        cmd = new OleDbCommand("Select COUNT(CID) from clint_details", a.conn);
-        read = cmd.ExecuteReader();
+        void begin() {
+            OleDbCommand cd = new OleDbCommand("Select COUNT(CID) from clint_details", a.conn);
+        read = cd.ExecuteReader();
         if (read.Read())
         {
             laCli.Text = read[0].ToString();

@@ -92,6 +92,7 @@ namespace WindowsFormsApplication1.Manager
                     cmd.Parameters.AddWithValue("@p2", cnic);
                     cmd.Parameters.AddWithValue("@p4", pass);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record Updated");
                 }
             }
             catch (Exception ex)

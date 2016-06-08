@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Agent
             cm.Parameters.AddWithValue("@p1", combohouse.Text);
             cm.ExecuteNonQuery();
 
-            MessageBox.Show("House returned");
+            MessageBox.Show("House number "+combohouse.Text+" returned");
             groupBox1.Enabled = false;
             listView1.Items.Clear();
             combohouse.Items.Clear();

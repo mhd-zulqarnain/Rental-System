@@ -361,6 +361,7 @@
             // 
             // comboarea
             // 
+            this.comboarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboarea.FormattingEnabled = true;
             this.comboarea.Location = new System.Drawing.Point(533, 35);
             this.comboarea.Name = "comboarea";

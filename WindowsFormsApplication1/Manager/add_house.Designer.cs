@@ -350,6 +350,7 @@
             // 
             // comboArea
             // 
+            this.comboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboArea.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboArea.FormattingEnabled = true;
             this.comboArea.Location = new System.Drawing.Point(322, 234);
@@ -359,6 +360,7 @@
             // 
             // comboPric
             // 
+            this.comboPric.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPric.Font = new System.Drawing.Font("Charlemagne Std", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPric.FormattingEnabled = true;
             this.comboPric.Items.AddRange(new object[] {

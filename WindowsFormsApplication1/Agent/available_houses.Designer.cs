@@ -47,13 +47,13 @@
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.l1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new System.Windows.Forms.Button();
             this.comboarea = new System.Windows.Forms.ComboBox();
-            this.l1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -305,6 +305,17 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Pristina", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(50, 45);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(156, 35);
+            this.l1.TabIndex = 52;
+            this.l1.Text = "Avaliable House";
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -352,23 +363,13 @@
             // 
             // comboarea
             // 
+            this.comboarea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboarea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboarea.FormattingEnabled = true;
             this.comboarea.Location = new System.Drawing.Point(527, 52);
             this.comboarea.Name = "comboarea";
             this.comboarea.Size = new System.Drawing.Size(144, 21);
             this.comboarea.TabIndex = 41;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Pristina", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(50, 45);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(156, 35);
-            this.l1.TabIndex = 52;
-            this.l1.Text = "Avaliable House";
             // 
             // available_houses
             // 

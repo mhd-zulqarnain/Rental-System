@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.l1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.combotype = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbxpass = new System.Windows.Forms.TextBox();
             this.tbxuName = new System.Windows.Forms.TextBox();
-            this.l1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,17 @@
             this.panel1.Size = new System.Drawing.Size(418, 330);
             this.panel1.TabIndex = 0;
             // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l1.ForeColor = System.Drawing.Color.Snow;
+            this.l1.Location = new System.Drawing.Point(47, 15);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(119, 35);
+            this.l1.TabIndex = 52;
+            this.l1.Text = "LOGIN";
+            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -75,6 +86,7 @@
             // 
             // combotype
             // 
+            this.combotype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combotype.FormattingEnabled = true;
             this.combotype.Items.AddRange(new object[] {
             "MANAGER",
@@ -83,7 +95,6 @@
             this.combotype.Name = "combotype";
             this.combotype.Size = new System.Drawing.Size(121, 21);
             this.combotype.TabIndex = 32;
-            this.combotype.Text = "AGENT";
             // 
             // label1
             // 
@@ -145,17 +156,6 @@
             this.tbxuName.Name = "tbxuName";
             this.tbxuName.Size = new System.Drawing.Size(144, 20);
             this.tbxuName.TabIndex = 25;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.Color.Snow;
-            this.l1.Location = new System.Drawing.Point(47, 15);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(119, 35);
-            this.l1.TabIndex = 52;
-            this.l1.Text = "LOGIN";
             // 
             // sign_in
             // 

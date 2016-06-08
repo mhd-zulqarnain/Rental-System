@@ -528,6 +528,7 @@
             // 
             // comboCus
             // 
+            this.comboCus.BackColor = System.Drawing.SystemColors.Window;
             this.comboCus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCus.FormattingEnabled = true;
             this.comboCus.Items.AddRange(new object[] {
@@ -544,9 +545,9 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Snow;
-            this.btnSearch.Location = new System.Drawing.Point(512, 18);
+            this.btnSearch.Location = new System.Drawing.Point(503, 18);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 28);
+            this.btnSearch.Size = new System.Drawing.Size(120, 28);
             this.btnSearch.TabIndex = 38;
             this.btnSearch.Text = "Search By Area";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.TopLeft;

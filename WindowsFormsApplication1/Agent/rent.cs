@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1.Agent
                     }
 
                 }
-                else if (comboCus.Text == "Old")
+                else if (comboCus.Text == "Old" &&combocusName.Text!= "" && Hnum != "")
                 {
                     OleDbCommand cmd = new OleDbCommand("Select* from clint_details where clint_name='" + combocusName.Text + "'", a.conn);
                     OleDbDataReader rd = cmd.ExecuteReader();
@@ -252,11 +252,13 @@ namespace WindowsFormsApplication1.Agent
                         Clint_Script sc = new Clint_Script(Convert.ToInt32(houseBox.Text));
                         sc.Show();
                     }
+                    else
+                        MessageBox.Show("House number "+houseBox.Text+" given to rent ");
                 }
 
                 else
                 {
-                    MessageBox.Show("Fill all Tables");
+                    MessageBox.Show("Fill all Fields");
                 }
 
                    OleDbCommand cm = new OleDbCommand("SELECT house_details.house_number, house_details.house_address, house_details.house_price FROM house_details LEFT JOIN booking_details ON house_details.house_number=booking_details.house_number WHERE (((booking_details.house_number) Is Null));", a.conn);

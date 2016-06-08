@@ -37,6 +37,11 @@
             this.pAddHouse = new System.Windows.Forms.PictureBox();
             this.pReser = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.l1 = new System.Windows.Forms.Label();
             this.btnchkDetail = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,11 +57,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.luname = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAgent)).BeginInit();
@@ -169,6 +169,52 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(29, 101);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(719, 162);
+            this.listView1.TabIndex = 57;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.Visible = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "House Number";
+            this.columnHeader1.Width = 131;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "ADDRESS";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 452;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Price";
+            this.columnHeader3.Width = 120;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(558, 266);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 32);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Generate Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // l1
             // 
             this.l1.AutoSize = true;
@@ -206,6 +252,7 @@
             // 
             // comboclint
             // 
+            this.comboclint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboclint.Font = new System.Drawing.Font("Verdana", 12F);
             this.comboclint.FormattingEnabled = true;
             this.comboclint.Location = new System.Drawing.Point(438, 64);
@@ -366,52 +413,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.93103F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(842, 161);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(558, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 32);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Generate Report";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(29, 101);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(719, 162);
-            this.listView1.TabIndex = 57;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.Visible = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "House Number";
-            this.columnHeader1.Width = 131;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "ADDRESS";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 452;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Price";
-            this.columnHeader3.Width = 120;
             // 
             // agent_clint_details
             // 
