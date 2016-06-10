@@ -12,12 +12,12 @@ namespace WindowsFormsApplication1.Report
 {
     public partial class Clint_Script : Form
     {
-        int housenumber;
+        Int32 housenumber;
         public Clint_Script()
         {
             InitializeComponent();
         }
-        public Clint_Script(int housenumber)
+        public Clint_Script(Int32 housenumber)
         {
             InitializeComponent();
             this.housenumber = housenumber;
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1.Report
         private void Clint_Script_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DataSet1.DataTable1' table. You can move, or remove it, as needed.
-            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1, housenumber);
+            this.DataTable1TableAdapter.Fill(this.DataSet1.DataTable1,housenumber);
 
             this.reportViewer1.RefreshReport();
         }

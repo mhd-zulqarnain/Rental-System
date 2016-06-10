@@ -234,7 +234,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "Record Manager");
             this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
@@ -427,7 +427,7 @@
             this.MinimizeBox = false;
             this.Name = "manger_clint_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "manger_clint_details";
+            this.Text = "CLINTS DETAILS";
             this.Load += new System.EventHandler(this.manger_clint_details_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

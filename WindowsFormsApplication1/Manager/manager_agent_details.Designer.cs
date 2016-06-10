@@ -156,7 +156,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "Record Manager");
             this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
@@ -459,11 +459,12 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "manager_agent_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "manager_agent_details";
+            this.Text = "AGENTS DETAILS";
             this.Load += new System.EventHandler(this.manager_agent_details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).EndInit();

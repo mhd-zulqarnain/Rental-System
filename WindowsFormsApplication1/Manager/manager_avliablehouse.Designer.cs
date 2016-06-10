@@ -148,7 +148,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "RECORD MANAGER");
             this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // toolTip1
@@ -377,11 +377,12 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "manager_avliablehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "manager_avliablehouse";
+            this.Text = "AVALIABLE HOUSES";
             this.Load += new System.EventHandler(this.manager_avliablehouse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).EndInit();

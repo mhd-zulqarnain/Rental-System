@@ -232,7 +232,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "Record Manager");
             this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
@@ -434,11 +434,12 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "add_house";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "add_house";
+            this.Text = "ADD HOUSES";
             this.Load += new System.EventHandler(this.add_house_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

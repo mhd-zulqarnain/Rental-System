@@ -30,11 +30,12 @@ namespace WindowsFormsApplication1.Manager
         {
             a.conn.Open();
             begin();
+            label1.Text = username;
         }
 
         void begin() {
             Random rd = new Random();
-            housenumber = rd.Next(3000, 9999);
+            housenumber = rd.Next(100, 999);
             tbxhnum.Text = housenumber.ToString();
 
             OleDbCommand cm = new OleDbCommand("SELECT * FROM agent_details ;", a.conn);
@@ -66,7 +67,7 @@ namespace WindowsFormsApplication1.Manager
                 ins.Parameters.AddWithValue("@p6", comboPric.Text);
                 ins.ExecuteNonQuery();
                 Random rd = new Random();
-                housenumber = rd.Next(3000, 9999);
+                housenumber = rd.Next(100, 999);
                 tbxhnum.Text = housenumber.ToString();
                 MessageBox.Show("House added Successfully");
                 clearBox();

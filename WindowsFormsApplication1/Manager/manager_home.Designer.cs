@@ -53,7 +53,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -78,7 +77,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.l1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -101,6 +99,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -121,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -304,7 +302,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "Record Manager");
             this.pReser.Click += new System.EventHandler(this.pReser_Click);
             // 
             // pClint
@@ -464,19 +462,6 @@
             this.pictureBox2.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox2, "Avaliable\r\n  Houses");
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(171, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Avaliable\r\n  Houses");
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label15);
@@ -496,11 +481,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Location = new System.Drawing.Point(17, 52);
+            this.label15.Location = new System.Drawing.Point(17, 43);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 19);
+            this.label15.Size = new System.Drawing.Size(68, 19);
             this.label15.TabIndex = 44;
             this.label15.Text = "Controls";
             // 
@@ -709,22 +694,11 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.l1);
+            this.panel4.Controls.Add(this.label16);
             this.panel4.Location = new System.Drawing.Point(50, 208);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(486, 115);
             this.panel4.TabIndex = 10;
-            // 
-            // l1
-            // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Old English Text MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.l1.Location = new System.Drawing.Point(2, 21);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(488, 51);
-            this.l1.TabIndex = 51;
-            this.l1.Text = "ERP For Rental System";
             // 
             // tableLayoutPanel4
             // 
@@ -783,11 +757,11 @@
             // lableDes
             // 
             this.lableDes.AutoSize = true;
-            this.lableDes.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableDes.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableDes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lableDes.Location = new System.Drawing.Point(7, 83);
+            this.lableDes.Location = new System.Drawing.Point(9, 135);
             this.lableDes.Name = "lableDes";
-            this.lableDes.Size = new System.Drawing.Size(223, 18);
+            this.lableDes.Size = new System.Drawing.Size(212, 18);
             this.lableDes.TabIndex = 44;
             this.lableDes.Text = "Quick search for avaliable houses";
             // 
@@ -890,7 +864,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.laCli);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.laAVA);
             this.panel1.Controls.Add(this.rent);
@@ -979,6 +952,17 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "REPORTS";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Location = new System.Drawing.Point(-5, 32);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(498, 35);
+            this.label16.TabIndex = 53;
+            this.label16.Text = "Welcome to admin portal";
+            // 
             // manager_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -991,11 +975,12 @@
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "manager_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "manager_home";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.manager_home_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1019,7 +1004,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -1105,7 +1089,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label l1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -1122,12 +1105,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label laCli;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label laAVA;
         private System.Windows.Forms.Label rent;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -423,11 +423,12 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "agent_clint_details";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_clint_details";
+            this.Text = "Clint Details";
             this.Load += new System.EventHandler(this.agent_clint_details_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pAvailable)).EndInit();

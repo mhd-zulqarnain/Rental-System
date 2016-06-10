@@ -58,6 +58,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.agent = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbxpass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.comboagentname = new System.Windows.Forms.ComboBox();
             this.Clints = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboclint = new System.Windows.Forms.ComboBox();
@@ -90,8 +92,10 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.agent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.Clints.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pRent
@@ -253,7 +257,7 @@
             this.pReser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pReser.TabIndex = 4;
             this.pReser.TabStop = false;
-            this.toolTip1.SetToolTip(this.pReser, "Reservation details");
+            this.toolTip1.SetToolTip(this.pReser, "Manage Record");
             // 
             // pClint
             // 
@@ -444,6 +448,7 @@
             // 
             this.agent.BackColor = System.Drawing.SystemColors.Highlight;
             this.agent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.agent.Controls.Add(this.pictureBox1);
             this.agent.Controls.Add(this.l1);
             this.agent.Controls.Add(this.groupBox1);
             this.agent.Controls.Add(this.button3);
@@ -455,6 +460,18 @@
             this.agent.Size = new System.Drawing.Size(415, 257);
             this.agent.TabIndex = 0;
             this.agent.Text = "Agent Details";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(255, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -580,6 +597,7 @@
             // 
             this.Clints.BackColor = System.Drawing.SystemColors.Highlight;
             this.Clints.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Clints.Controls.Add(this.pictureBox2);
             this.Clints.Controls.Add(this.label2);
             this.Clints.Controls.Add(this.label4);
             this.Clints.Controls.Add(this.button1);
@@ -590,6 +608,18 @@
             this.Clints.Size = new System.Drawing.Size(415, 257);
             this.Clints.TabIndex = 1;
             this.Clints.Text = "Clint Details";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(231, 68);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 66;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -631,11 +661,12 @@
             this.ClientSize = new System.Drawing.Size(844, 556);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "maanger_rec_handle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "maanger_rec_handle";
+            this.Text = "RECORD MANAGER";
             this.Load += new System.EventHandler(this.maanger_rec_handle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
@@ -657,10 +688,12 @@
             this.tabControl1.ResumeLayout(false);
             this.agent.ResumeLayout(false);
             this.agent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Clints.ResumeLayout(false);
             this.Clints.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,5 +744,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -46,7 +46,6 @@
             this.pReturn = new System.Windows.Forms.PictureBox();
             this.pExit = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -77,7 +76,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.l1 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -114,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -367,19 +365,6 @@
             this.toolTip1.InitialDelay = 0;
             this.toolTip1.ReshowDelay = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(164, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Avaliable\r\n  Houses");
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -535,11 +520,11 @@
             // lableDes
             // 
             this.lableDes.AutoSize = true;
-            this.lableDes.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lableDes.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableDes.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lableDes.Location = new System.Drawing.Point(0, 153);
+            this.lableDes.Location = new System.Drawing.Point(10, 135);
             this.lableDes.Name = "lableDes";
-            this.lableDes.Size = new System.Drawing.Size(223, 18);
+            this.lableDes.Size = new System.Drawing.Size(212, 18);
             this.lableDes.TabIndex = 44;
             this.lableDes.Text = "Quick search for avaliable houses";
             // 
@@ -642,7 +627,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.laCli);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.laAVA);
             this.panel1.Controls.Add(this.rent);
@@ -733,22 +717,22 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.l1);
+            this.panel4.Controls.Add(this.label16);
             this.panel4.Location = new System.Drawing.Point(64, 204);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(486, 115);
             this.panel4.TabIndex = 7;
             // 
-            // l1
+            // label16
             // 
-            this.l1.AutoSize = true;
-            this.l1.Font = new System.Drawing.Font("Old English Text MT", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.l1.Location = new System.Drawing.Point(2, 21);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(488, 51);
-            this.l1.TabIndex = 51;
-            this.l1.Text = "ERP For Rental System";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Castellar", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label16.Location = new System.Drawing.Point(-3, 23);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(493, 35);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "Welcome to agent portal";
             // 
             // panel3
             // 
@@ -769,11 +753,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Location = new System.Drawing.Point(13, 33);
+            this.label15.Location = new System.Drawing.Point(13, 30);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 19);
+            this.label15.Size = new System.Drawing.Size(68, 19);
             this.label15.TabIndex = 44;
             this.label15.Text = "Controls";
             // 
@@ -992,11 +976,12 @@
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "agent_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "agent_home";
+            this.Text = "Home";
             this.Load += new System.EventHandler(this.agent_home_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1013,7 +998,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1080,7 +1064,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label rent;
         private System.Windows.Forms.Label label5;
@@ -1099,7 +1082,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label l1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label12;
@@ -1130,5 +1112,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -195,5 +195,21 @@ namespace WindowsFormsApplication1.Manager
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new maanger_rec_handle(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var form = new maanger_rec_handle(username);
+            form.Closed += (s, args) => this.Close();
+            form.Show();
+        }
     }
 }

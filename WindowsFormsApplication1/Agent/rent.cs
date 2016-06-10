@@ -249,7 +249,7 @@ namespace WindowsFormsApplication1.Agent
                     }
                     result = MessageBox.Show("Do you want Generate Report?", "Question", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes) {
-                        Clint_Script sc = new Clint_Script(Convert.ToInt32(houseBox.Text));
+                        Clint_Script sc = new Clint_Script(Convert.ToInt16(houseBox.Text));
                         sc.Show();
                     }
                     else
